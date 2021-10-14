@@ -8,19 +8,16 @@ namespace Mp3Player
 {
     public partial class SettingsForm : Form
     {
-        // mouse moving
+        #region MouseMoving
         public const int WM_NCLBUTTONDOWN = 0XA1;
         public const int HT_CAPTION = 0X2;
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
-        // mouse moving end
+        #endregion
 
-        public SettingsForm()
-        {
-            InitializeComponent();
-        }
+        public SettingsForm() => InitializeComponent();
 
         private void SettingsForm_Load(object sender, EventArgs e) { }
 

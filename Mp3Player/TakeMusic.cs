@@ -9,17 +9,21 @@ namespace Mp3Player
         ActionsMain act = new ActionsMain();
         string[] taked_file;
 
+        #region MouseMoving
         public const int WM_NCLBUTTONDOWN = 0XA1;
         public const int HT_CAPTION = 0X2;
-        // mouse moving
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
+        #endregion
+
         public TakeMusic()
         {
             InitializeComponent();
         }
+
+        private void TakeMusic_Load(object sender, EventArgs e) { }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -44,6 +48,7 @@ namespace Mp3Player
             }
         }
 
+        #region BoxLineEffect
         public string text_BoxLineEffect { get { return BoxLineEffect.Text; } }
         public string text_BoxLineEffect2 { get { return BoxLineEffect2.Text; } }
         public string text_BoxLineEffect3 { get { return BoxLineEffect3.Text; } }
@@ -64,7 +69,9 @@ namespace Mp3Player
         public string text_BoxLineEffect18 { get { return BoxLineEffect18.Text; } }
         public string text_BoxLineEffect19 { get { return BoxLineEffect19.Text; } }
         public string text_BoxLineEffect20 { get { return BoxLineEffect20.Text; } }
+        #endregion
 
+        #region OpenEffect
         private void OpenEffect_Click(object sender, EventArgs e) { BoxLineEffect.Text = act.TakeFile(); }
         private void OpenEffect2_Click(object sender, EventArgs e) { BoxLineEffect2.Text = act.TakeFile(); }
         private void OpenEffect3_Click(object sender, EventArgs e) { BoxLineEffect3.Text = act.TakeFile(); }
@@ -85,12 +92,9 @@ namespace Mp3Player
         private void OpenEffect18_Click(object sender, EventArgs e) { BoxLineEffect18.Text = act.TakeFile(); }
         private void OpenEffect19_Click(object sender, EventArgs e) { BoxLineEffect19.Text = act.TakeFile(); }
         private void OpenEffect20_Click(object sender, EventArgs e) { BoxLineEffect20.Text = act.TakeFile(); }
+        #endregion
 
-        private void TakeMusic_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        #region DragNDrop
         private void BoxLineEffect_DragDrop(object sender, DragEventArgs e)
         {
             taked_file = (string[])e.Data.GetData(DataFormats.FileDrop);
@@ -330,5 +334,6 @@ namespace Mp3Player
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Copy;
         }
+        #endregion
     }
 }

@@ -271,7 +271,7 @@ namespace Mp3Player
                 }
             }
         }
-
+        
         private async void PauseButtonSecond_Click(object sender, EventArgs e) {
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 SecondMedia.controls.pause();
