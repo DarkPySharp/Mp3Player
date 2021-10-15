@@ -130,6 +130,7 @@ namespace Mp3Player
             this.BoxLineEffect.ReadOnly = true;
             this.BoxLineEffect.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect.TabIndex = 6;
+            this.BoxLineEffect.TextChanged += new System.EventHandler(this.BoxLineEffect_TextChanged);
             this.BoxLineEffect.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect_DragDrop);
             this.BoxLineEffect.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect_DragEnter);
             // 
@@ -151,6 +152,7 @@ namespace Mp3Player
             this.BoxLineEffect2.ReadOnly = true;
             this.BoxLineEffect2.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect2.TabIndex = 8;
+            this.BoxLineEffect2.TextChanged += new System.EventHandler(this.BoxLineEffect2_TextChanged);
             this.BoxLineEffect2.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect2_DragDrop);
             this.BoxLineEffect2.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect2_DragEnter);
             // 
@@ -172,6 +174,7 @@ namespace Mp3Player
             this.BoxLineEffect3.ReadOnly = true;
             this.BoxLineEffect3.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect3.TabIndex = 10;
+            this.BoxLineEffect3.TextChanged += new System.EventHandler(this.BoxLineEffect3_TextChanged);
             this.BoxLineEffect3.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect3_DragDrop);
             this.BoxLineEffect3.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect3_DragEnter);
             // 
@@ -193,6 +196,7 @@ namespace Mp3Player
             this.BoxLineEffect4.ReadOnly = true;
             this.BoxLineEffect4.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect4.TabIndex = 12;
+            this.BoxLineEffect4.TextChanged += new System.EventHandler(this.BoxLineEffect4_TextChanged);
             this.BoxLineEffect4.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect4_DragDrop);
             this.BoxLineEffect4.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect4_DragEnter);
             // 
@@ -214,6 +218,7 @@ namespace Mp3Player
             this.BoxLineEffect5.ReadOnly = true;
             this.BoxLineEffect5.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect5.TabIndex = 14;
+            this.BoxLineEffect5.TextChanged += new System.EventHandler(this.BoxLineEffect5_TextChanged);
             this.BoxLineEffect5.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect5_DragDrop);
             this.BoxLineEffect5.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect5_DragEnter);
             // 
@@ -235,6 +240,7 @@ namespace Mp3Player
             this.BoxLineEffect6.ReadOnly = true;
             this.BoxLineEffect6.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect6.TabIndex = 16;
+            this.BoxLineEffect6.TextChanged += new System.EventHandler(this.BoxLineEffect6_TextChanged);
             this.BoxLineEffect6.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect6_DragDrop);
             this.BoxLineEffect6.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect6_DragEnter);
             // 
@@ -256,6 +262,7 @@ namespace Mp3Player
             this.BoxLineEffect7.ReadOnly = true;
             this.BoxLineEffect7.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect7.TabIndex = 18;
+            this.BoxLineEffect7.TextChanged += new System.EventHandler(this.BoxLineEffect7_TextChanged);
             this.BoxLineEffect7.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect7_DragDrop);
             this.BoxLineEffect7.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect7_DragEnter);
             // 
@@ -277,6 +284,7 @@ namespace Mp3Player
             this.BoxLineEffect8.ReadOnly = true;
             this.BoxLineEffect8.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect8.TabIndex = 20;
+            this.BoxLineEffect8.TextChanged += new System.EventHandler(this.BoxLineEffect8_TextChanged);
             this.BoxLineEffect8.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect8_DragDrop);
             this.BoxLineEffect8.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect8_DragEnter);
             // 
@@ -298,6 +306,7 @@ namespace Mp3Player
             this.BoxLineEffect9.ReadOnly = true;
             this.BoxLineEffect9.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect9.TabIndex = 22;
+            this.BoxLineEffect9.TextChanged += new System.EventHandler(this.BoxLineEffect9_TextChanged);
             this.BoxLineEffect9.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect9_DragDrop);
             this.BoxLineEffect9.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect9_DragEnter);
             // 
@@ -319,6 +328,7 @@ namespace Mp3Player
             this.BoxLineEffect10.ReadOnly = true;
             this.BoxLineEffect10.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect10.TabIndex = 24;
+            this.BoxLineEffect10.TextChanged += new System.EventHandler(this.BoxLineEffect10_TextChanged);
             this.BoxLineEffect10.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect10_DragDrop);
             this.BoxLineEffect10.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect10_DragEnter);
             // 
@@ -340,6 +350,7 @@ namespace Mp3Player
             this.BoxLineEffect20.ReadOnly = true;
             this.BoxLineEffect20.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect20.TabIndex = 44;
+            this.BoxLineEffect20.TextChanged += new System.EventHandler(this.BoxLineEffect20_TextChanged);
             this.BoxLineEffect20.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect20_DragDrop);
             this.BoxLineEffect20.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect20_DragEnter);
             // 
@@ -361,6 +372,7 @@ namespace Mp3Player
             this.BoxLineEffect19.ReadOnly = true;
             this.BoxLineEffect19.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect19.TabIndex = 42;
+            this.BoxLineEffect19.TextChanged += new System.EventHandler(this.BoxLineEffect19_TextChanged);
             this.BoxLineEffect19.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect19_DragDrop);
             this.BoxLineEffect19.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect19_DragEnter);
             // 
@@ -382,6 +394,7 @@ namespace Mp3Player
             this.BoxLineEffect18.ReadOnly = true;
             this.BoxLineEffect18.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect18.TabIndex = 40;
+            this.BoxLineEffect18.TextChanged += new System.EventHandler(this.BoxLineEffect18_TextChanged);
             this.BoxLineEffect18.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect18_DragDrop);
             this.BoxLineEffect18.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect18_DragEnter);
             // 
@@ -403,6 +416,7 @@ namespace Mp3Player
             this.BoxLineEffect17.ReadOnly = true;
             this.BoxLineEffect17.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect17.TabIndex = 38;
+            this.BoxLineEffect17.TextChanged += new System.EventHandler(this.BoxLineEffect17_TextChanged);
             this.BoxLineEffect17.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect17_DragDrop);
             this.BoxLineEffect17.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect17_DragEnter);
             // 
@@ -424,6 +438,7 @@ namespace Mp3Player
             this.BoxLineEffect16.ReadOnly = true;
             this.BoxLineEffect16.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect16.TabIndex = 36;
+            this.BoxLineEffect16.TextChanged += new System.EventHandler(this.BoxLineEffect16_TextChanged);
             this.BoxLineEffect16.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect16_DragDrop);
             this.BoxLineEffect16.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect16_DragEnter);
             // 
@@ -445,6 +460,7 @@ namespace Mp3Player
             this.BoxLineEffect15.ReadOnly = true;
             this.BoxLineEffect15.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect15.TabIndex = 34;
+            this.BoxLineEffect15.TextChanged += new System.EventHandler(this.BoxLineEffect15_TextChanged);
             this.BoxLineEffect15.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect15_DragDrop);
             this.BoxLineEffect15.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect15_DragEnter);
             // 
@@ -466,6 +482,7 @@ namespace Mp3Player
             this.BoxLineEffect14.ReadOnly = true;
             this.BoxLineEffect14.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect14.TabIndex = 32;
+            this.BoxLineEffect14.TextChanged += new System.EventHandler(this.BoxLineEffect14_TextChanged);
             this.BoxLineEffect14.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect14_DragDrop);
             this.BoxLineEffect14.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect14_DragEnter);
             // 
@@ -487,6 +504,7 @@ namespace Mp3Player
             this.BoxLineEffect13.ReadOnly = true;
             this.BoxLineEffect13.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect13.TabIndex = 30;
+            this.BoxLineEffect13.TextChanged += new System.EventHandler(this.BoxLineEffect13_TextChanged);
             this.BoxLineEffect13.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect13_DragDrop);
             this.BoxLineEffect13.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect13_DragEnter);
             // 
@@ -508,6 +526,7 @@ namespace Mp3Player
             this.BoxLineEffect12.ReadOnly = true;
             this.BoxLineEffect12.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect12.TabIndex = 28;
+            this.BoxLineEffect12.TextChanged += new System.EventHandler(this.BoxLineEffect12_TextChanged);
             this.BoxLineEffect12.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect12_DragDrop);
             this.BoxLineEffect12.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect12_DragEnter);
             // 
@@ -529,6 +548,7 @@ namespace Mp3Player
             this.BoxLineEffect11.ReadOnly = true;
             this.BoxLineEffect11.Size = new System.Drawing.Size(535, 20);
             this.BoxLineEffect11.TabIndex = 26;
+            this.BoxLineEffect11.TextChanged += new System.EventHandler(this.BoxLineEffect11_TextChanged);
             this.BoxLineEffect11.DragDrop += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect11_DragDrop);
             this.BoxLineEffect11.DragEnter += new System.Windows.Forms.DragEventHandler(this.BoxLineEffect11_DragEnter);
             // 
@@ -596,44 +616,44 @@ namespace Mp3Player
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button OpenEffect;
-        private System.Windows.Forms.TextBox BoxLineEffect;
         private System.Windows.Forms.Button OpenEffect2;
-        private System.Windows.Forms.TextBox BoxLineEffect2;
         private System.Windows.Forms.Button OpenEffect3;
-        private System.Windows.Forms.TextBox BoxLineEffect3;
         private System.Windows.Forms.Button OpenEffect4;
-        private System.Windows.Forms.TextBox BoxLineEffect4;
         private System.Windows.Forms.Button OpenEffect5;
-        private System.Windows.Forms.TextBox BoxLineEffect5;
         private System.Windows.Forms.Button OpenEffect6;
-        private System.Windows.Forms.TextBox BoxLineEffect6;
         private System.Windows.Forms.Button OpenEffect7;
-        private System.Windows.Forms.TextBox BoxLineEffect7;
         private System.Windows.Forms.Button OpenEffect8;
-        private System.Windows.Forms.TextBox BoxLineEffect8;
         private System.Windows.Forms.Button OpenEffect9;
-        private System.Windows.Forms.TextBox BoxLineEffect9;
         private System.Windows.Forms.Button OpenEffect10;
-        private System.Windows.Forms.TextBox BoxLineEffect10;
         private System.Windows.Forms.Button OpenEffect20;
-        private System.Windows.Forms.TextBox BoxLineEffect20;
         private System.Windows.Forms.Button OpenEffect19;
-        private System.Windows.Forms.TextBox BoxLineEffect19;
         private System.Windows.Forms.Button OpenEffect18;
-        private System.Windows.Forms.TextBox BoxLineEffect18;
         private System.Windows.Forms.Button OpenEffect17;
-        private System.Windows.Forms.TextBox BoxLineEffect17;
         private System.Windows.Forms.Button OpenEffect16;
-        private System.Windows.Forms.TextBox BoxLineEffect16;
         private System.Windows.Forms.Button OpenEffect15;
-        private System.Windows.Forms.TextBox BoxLineEffect15;
         private System.Windows.Forms.Button OpenEffect14;
-        private System.Windows.Forms.TextBox BoxLineEffect14;
         private System.Windows.Forms.Button OpenEffect13;
-        private System.Windows.Forms.TextBox BoxLineEffect13;
         private System.Windows.Forms.Button OpenEffect12;
-        private System.Windows.Forms.TextBox BoxLineEffect12;
         private System.Windows.Forms.Button OpenEffect11;
-        private System.Windows.Forms.TextBox BoxLineEffect11;
+        public System.Windows.Forms.TextBox BoxLineEffect;
+        public System.Windows.Forms.TextBox BoxLineEffect2;
+        public System.Windows.Forms.TextBox BoxLineEffect3;
+        public System.Windows.Forms.TextBox BoxLineEffect4;
+        public System.Windows.Forms.TextBox BoxLineEffect5;
+        public System.Windows.Forms.TextBox BoxLineEffect6;
+        public System.Windows.Forms.TextBox BoxLineEffect7;
+        public System.Windows.Forms.TextBox BoxLineEffect8;
+        public System.Windows.Forms.TextBox BoxLineEffect9;
+        public System.Windows.Forms.TextBox BoxLineEffect10;
+        public System.Windows.Forms.TextBox BoxLineEffect20;
+        public System.Windows.Forms.TextBox BoxLineEffect19;
+        public System.Windows.Forms.TextBox BoxLineEffect18;
+        public System.Windows.Forms.TextBox BoxLineEffect17;
+        public System.Windows.Forms.TextBox BoxLineEffect16;
+        public System.Windows.Forms.TextBox BoxLineEffect15;
+        public System.Windows.Forms.TextBox BoxLineEffect14;
+        public System.Windows.Forms.TextBox BoxLineEffect13;
+        public System.Windows.Forms.TextBox BoxLineEffect12;
+        public System.Windows.Forms.TextBox BoxLineEffect11;
     }
 }

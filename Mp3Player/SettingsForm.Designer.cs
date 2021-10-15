@@ -95,7 +95,7 @@ namespace Mp3Player
             // 
             // delayTransition
             // 
-            this.delayTransition.Location = new System.Drawing.Point(3, 33);
+            this.delayTransition.Location = new System.Drawing.Point(3, 27);
             this.delayTransition.Name = "delayTransition";
             this.delayTransition.Size = new System.Drawing.Size(46, 20);
             this.delayTransition.TabIndex = 5;
@@ -106,7 +106,7 @@ namespace Mp3Player
             // delayForTransition
             // 
             this.delayForTransition.AutoSize = true;
-            this.delayForTransition.Location = new System.Drawing.Point(51, 36);
+            this.delayForTransition.Location = new System.Drawing.Point(51, 30);
             this.delayForTransition.Name = "delayForTransition";
             this.delayForTransition.Size = new System.Drawing.Size(130, 13);
             this.delayForTransition.TabIndex = 6;
@@ -115,7 +115,7 @@ namespace Mp3Player
             // delayUpdateProgressLabel
             // 
             this.delayUpdateProgressLabel.AutoSize = true;
-            this.delayUpdateProgressLabel.Location = new System.Drawing.Point(51, 58);
+            this.delayUpdateProgressLabel.Location = new System.Drawing.Point(51, 51);
             this.delayUpdateProgressLabel.Name = "delayUpdateProgressLabel";
             this.delayUpdateProgressLabel.Size = new System.Drawing.Size(201, 13);
             this.delayUpdateProgressLabel.TabIndex = 8;
@@ -123,7 +123,7 @@ namespace Mp3Player
             // 
             // delayUpdateProgress
             // 
-            this.delayUpdateProgress.Location = new System.Drawing.Point(3, 55);
+            this.delayUpdateProgress.Location = new System.Drawing.Point(3, 48);
             this.delayUpdateProgress.Name = "delayUpdateProgress";
             this.delayUpdateProgress.Size = new System.Drawing.Size(46, 20);
             this.delayUpdateProgress.TabIndex = 7;
@@ -134,7 +134,7 @@ namespace Mp3Player
             // StandartVolumeLabel
             // 
             this.StandartVolumeLabel.AutoSize = true;
-            this.StandartVolumeLabel.Location = new System.Drawing.Point(51, 80);
+            this.StandartVolumeLabel.Location = new System.Drawing.Point(51, 72);
             this.StandartVolumeLabel.Name = "StandartVolumeLabel";
             this.StandartVolumeLabel.Size = new System.Drawing.Size(146, 13);
             this.StandartVolumeLabel.TabIndex = 10;
@@ -142,7 +142,7 @@ namespace Mp3Player
             // 
             // StandartVolume
             // 
-            this.StandartVolume.Location = new System.Drawing.Point(3, 77);
+            this.StandartVolume.Location = new System.Drawing.Point(3, 69);
             this.StandartVolume.Name = "StandartVolume";
             this.StandartVolume.Size = new System.Drawing.Size(46, 20);
             this.StandartVolume.TabIndex = 9;
@@ -151,7 +151,7 @@ namespace Mp3Player
             // 
             // SaveInFile
             // 
-            this.SaveInFile.Location = new System.Drawing.Point(229, 119);
+            this.SaveInFile.Location = new System.Drawing.Point(229, 107);
             this.SaveInFile.Name = "SaveInFile";
             this.SaveInFile.Size = new System.Drawing.Size(68, 23);
             this.SaveInFile.TabIndex = 11;
@@ -162,7 +162,7 @@ namespace Mp3Player
             // MultiMusicRadio
             // 
             this.MultiMusicRadio.AutoSize = true;
-            this.MultiMusicRadio.Location = new System.Drawing.Point(3, 99);
+            this.MultiMusicRadio.Location = new System.Drawing.Point(3, 90);
             this.MultiMusicRadio.Name = "MultiMusicRadio";
             this.MultiMusicRadio.Size = new System.Drawing.Size(287, 17);
             this.MultiMusicRadio.TabIndex = 12;
@@ -172,7 +172,7 @@ namespace Mp3Player
             // SmoothStartStopCheck
             // 
             this.SmoothStartStopCheck.AutoSize = true;
-            this.SmoothStartStopCheck.Location = new System.Drawing.Point(3, 115);
+            this.SmoothStartStopCheck.Location = new System.Drawing.Point(3, 105);
             this.SmoothStartStopCheck.Name = "SmoothStartStopCheck";
             this.SmoothStartStopCheck.Size = new System.Drawing.Size(134, 17);
             this.SmoothStartStopCheck.TabIndex = 13;
@@ -183,7 +183,7 @@ namespace Mp3Player
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 145);
+            this.ClientSize = new System.Drawing.Size(300, 131);
             this.Controls.Add(this.SmoothStartStopCheck);
             this.Controls.Add(this.MultiMusicRadio);
             this.Controls.Add(this.SaveInFile);

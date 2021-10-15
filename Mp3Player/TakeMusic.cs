@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace Mp3Player
 {
     public partial class TakeMusic : Form
     {
+        DJ_SHARP Root;
         ActionsMain act = new ActionsMain();
         string[] taked_file;
 
@@ -18,9 +20,10 @@ namespace Mp3Player
         public static extern bool ReleaseCapture();
         #endregion
 
-        public TakeMusic()
+        public TakeMusic(DJ_SHARP Root)
         {
             InitializeComponent();
+            this.Root = Root;
         }
 
         private void TakeMusic_Load(object sender, EventArgs e) { }
@@ -47,29 +50,6 @@ namespace Mp3Player
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-
-        #region BoxLineEffect
-        public string text_BoxLineEffect { get { return BoxLineEffect.Text; } }
-        public string text_BoxLineEffect2 { get { return BoxLineEffect2.Text; } }
-        public string text_BoxLineEffect3 { get { return BoxLineEffect3.Text; } }
-        public string text_BoxLineEffect4 { get { return BoxLineEffect4.Text; } }
-        public string text_BoxLineEffect5 { get { return BoxLineEffect5.Text; } }
-        public string text_BoxLineEffect6 { get { return BoxLineEffect6.Text; } }
-        public string text_BoxLineEffect7 { get { return BoxLineEffect7.Text; } }
-        public string text_BoxLineEffect8 { get { return BoxLineEffect8.Text; } }
-        public string text_BoxLineEffect9 { get { return BoxLineEffect9.Text; } }
-        public string text_BoxLineEffect10 { get { return BoxLineEffect10.Text; } }
-        public string text_BoxLineEffect11 { get { return BoxLineEffect11.Text; } }
-        public string text_BoxLineEffect12 { get { return BoxLineEffect12.Text; } }
-        public string text_BoxLineEffect13 { get { return BoxLineEffect13.Text; } }
-        public string text_BoxLineEffect14 { get { return BoxLineEffect14.Text; } }
-        public string text_BoxLineEffect15 { get { return BoxLineEffect15.Text; } }
-        public string text_BoxLineEffect16 { get { return BoxLineEffect16.Text; } }
-        public string text_BoxLineEffect17 { get { return BoxLineEffect17.Text; } }
-        public string text_BoxLineEffect18 { get { return BoxLineEffect18.Text; } }
-        public string text_BoxLineEffect19 { get { return BoxLineEffect19.Text; } }
-        public string text_BoxLineEffect20 { get { return BoxLineEffect20.Text; } }
-        #endregion
 
         #region OpenEffect
         private void OpenEffect_Click(object sender, EventArgs e) { BoxLineEffect.Text = act.TakeFile(); }
@@ -333,6 +313,88 @@ namespace Mp3Player
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Copy;
+        }
+        #endregion
+
+        #region BoxLine_TextChanged
+        private void BoxLineEffect_TextChanged(object sender, EventArgs e) {
+            Root.EffectName.Text = Path.GetFileName(BoxLineEffect.Text);
+        }
+
+        private void BoxLineEffect2_TextChanged(object sender, EventArgs e) {
+            Root.EffectName2.Text = Path.GetFileName(BoxLineEffect2.Text);
+        }
+
+        private void BoxLineEffect3_TextChanged(object sender, EventArgs e) {
+            Root.EffectName3.Text = Path.GetFileName(BoxLineEffect3.Text);
+        }
+
+        private void BoxLineEffect8_TextChanged(object sender, EventArgs e) {
+            Root.EffectName8.Text = Path.GetFileName(BoxLineEffect8.Text);
+        }
+
+        private void BoxLineEffect5_TextChanged(object sender, EventArgs e) {
+            Root.EffectName5.Text = Path.GetFileName(BoxLineEffect5.Text);
+        }
+
+        private void BoxLineEffect6_TextChanged(object sender, EventArgs e) {
+            Root.EffectName6.Text = Path.GetFileName(BoxLineEffect6.Text);
+        }
+
+        private void BoxLineEffect7_TextChanged(object sender, EventArgs e) {
+            Root.EffectName7.Text = Path.GetFileName(BoxLineEffect7.Text);
+        }
+
+        private void BoxLineEffect4_TextChanged(object sender, EventArgs e) {
+            Root.EffectName4.Text = Path.GetFileName(BoxLineEffect4.Text);
+        }
+
+        private void BoxLineEffect9_TextChanged(object sender, EventArgs e) {
+            Root.EffectName9.Text = Path.GetFileName(BoxLineEffect9.Text);
+        }
+
+        private void BoxLineEffect10_TextChanged(object sender, EventArgs e) {
+            Root.EffectName10.Text = Path.GetFileName(BoxLineEffect10.Text);
+        }
+
+        private void BoxLineEffect11_TextChanged(object sender, EventArgs e) {
+            Root.EffectName11.Text = Path.GetFileName(BoxLineEffect11.Text);
+        }
+
+        private void BoxLineEffect12_TextChanged(object sender, EventArgs e) {
+            Root.EffectName12.Text = Path.GetFileName(BoxLineEffect12.Text);
+        }
+
+        private void BoxLineEffect13_TextChanged(object sender, EventArgs e) {
+            Root.EffectName13.Text = Path.GetFileName(BoxLineEffect13.Text);
+        }
+
+        private void BoxLineEffect14_TextChanged(object sender, EventArgs e) {
+            Root.EffectName14.Text = Path.GetFileName(BoxLineEffect14.Text);
+        }
+
+        private void BoxLineEffect15_TextChanged(object sender, EventArgs e) {
+            Root.EffectName15.Text = Path.GetFileName(BoxLineEffect15.Text);
+        }
+
+        private void BoxLineEffect16_TextChanged(object sender, EventArgs e) {
+            Root.EffectName16.Text = Path.GetFileName(BoxLineEffect16.Text);
+        }
+
+        private void BoxLineEffect17_TextChanged(object sender, EventArgs e) {
+            Root.EffectName17.Text = Path.GetFileName(BoxLineEffect17.Text);
+        }
+
+        private void BoxLineEffect18_TextChanged(object sender, EventArgs e) {
+            Root.EffectName18.Text = Path.GetFileName(BoxLineEffect18.Text);
+        }
+
+        private void BoxLineEffect19_TextChanged(object sender, EventArgs e) {
+            Root.EffectName19.Text = Path.GetFileName(BoxLineEffect19.Text);
+        }
+
+        private void BoxLineEffect20_TextChanged(object sender, EventArgs e) {
+            Root.EffectName20.Text = Path.GetFileName(BoxLineEffect20.Text);
         }
         #endregion
     }

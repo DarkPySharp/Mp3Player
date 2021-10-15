@@ -215,7 +215,7 @@ namespace Mp3Player
             this.SettingsDJ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SettingsDJ.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SettingsDJ.ForeColor = System.Drawing.Color.White;
-            this.SettingsDJ.Location = new System.Drawing.Point(51, 1);
+            this.SettingsDJ.Location = new System.Drawing.Point(51, 0);
             this.SettingsDJ.Name = "SettingsDJ";
             this.SettingsDJ.Size = new System.Drawing.Size(53, 23);
             this.SettingsDJ.TabIndex = 48;
@@ -228,7 +228,7 @@ namespace Mp3Player
             this.SettingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SettingsButton.ForeColor = System.Drawing.Color.White;
-            this.SettingsButton.Location = new System.Drawing.Point(3, 1);
+            this.SettingsButton.Location = new System.Drawing.Point(3, 0);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(48, 23);
             this.SettingsButton.TabIndex = 47;
@@ -1409,7 +1409,7 @@ namespace Mp3Player
             this.VolumeMain.Location = new System.Drawing.Point(-3, 552);
             this.VolumeMain.Maximum = 100;
             this.VolumeMain.Name = "VolumeMain";
-            this.VolumeMain.Size = new System.Drawing.Size(104, 45);
+            this.VolumeMain.Size = new System.Drawing.Size(104, 37);
             this.VolumeMain.TabIndex = 50;
             this.VolumeMain.Value = 100;
             this.VolumeMain.ValueChanged += new System.EventHandler(this.VolumeMain_ValueChanged);
@@ -1420,7 +1420,7 @@ namespace Mp3Player
             this.VolumeEffects.Location = new System.Drawing.Point(95, 552);
             this.VolumeEffects.Maximum = 100;
             this.VolumeEffects.Name = "VolumeEffects";
-            this.VolumeEffects.Size = new System.Drawing.Size(104, 45);
+            this.VolumeEffects.Size = new System.Drawing.Size(104, 37);
             this.VolumeEffects.TabIndex = 51;
             this.VolumeEffects.Value = 100;
             this.VolumeEffects.ValueChanged += new System.EventHandler(this.VolumeEffects_ValueChanged);
@@ -1624,7 +1624,6 @@ namespace Mp3Player
         private System.Windows.Forms.ProgressBar progressBarEffect2;
         private System.Windows.Forms.Button playEffect2;
         private System.Windows.Forms.Button playEffect;
-        private System.Windows.Forms.ProgressBar progressBarEffect;
         private System.Windows.Forms.ProgressBar progressBarEffect6;
         private System.Windows.Forms.ProgressBar progressBarEffect10;
         private System.Windows.Forms.Button playEffect10;
@@ -1730,6 +1729,7 @@ namespace Mp3Player
         private System.Windows.Forms.Button playEffect12;
         private System.Windows.Forms.Button playEffect11;
         public System.Windows.Forms.TrackBar VolumeEffects;
+        public System.Windows.Forms.ProgressBar progressBarEffect;
     }
 }
 

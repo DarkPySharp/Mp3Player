@@ -14,7 +14,7 @@ namespace Mp3Player
         #region variable
         WindowsMediaPlayer MainMedia = new WindowsMediaPlayer(); // медиа компоненты
         WindowsMediaPlayer SecondMedia = new WindowsMediaPlayer();
-        WindowsMediaPlayer MediaEffect = new WindowsMediaPlayer();
+        public WindowsMediaPlayer MediaEffect = new WindowsMediaPlayer();
         WindowsMediaPlayer MediaEffect2 = new WindowsMediaPlayer();
         WindowsMediaPlayer MediaEffect3 = new WindowsMediaPlayer();
         WindowsMediaPlayer MediaEffect4 = new WindowsMediaPlayer();
@@ -60,7 +60,7 @@ namespace Mp3Player
         bool IsInitedEffect20 = false;
         public static bool transisting = false;
 
-        TakeMusic effectsApplication = new TakeMusic();
+        TakeMusic effectsApplication;
         SettingsForm settingsApp = new SettingsForm();
         ActionsMain act = new ActionsMain();
         InteregetArgs args = new InteregetArgs();
@@ -155,6 +155,8 @@ namespace Mp3Player
                     timer1.Interval = delayUpdateProgress;
                 } catch { }
             }
+
+             effectsApplication = new TakeMusic(this);
         }
 
         #region MainMusic
@@ -325,10 +327,10 @@ namespace Mp3Player
         #region Effect
         private void playEffect_Click(object sender, EventArgs e)
         {
-            if (effectsApplication.text_BoxLineEffect != "")
+            if (effectsApplication.BoxLineEffect.Text != "")
             {
                 pauseEffects(1);
-                MediaEffect.URL = effectsApplication.text_BoxLineEffect;
+                MediaEffect.URL = effectsApplication.BoxLineEffect.Text;
                 MediaEffect.controls.currentPosition = timeEffect;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
@@ -343,10 +345,10 @@ namespace Mp3Player
 
         private void playEffect2_Click(object sender, EventArgs e)
         {
-            if (effectsApplication.text_BoxLineEffect2 != "")
+            if (effectsApplication.BoxLineEffect2.Text != "")
             {
                 pauseEffects(2);
-                MediaEffect2.URL = effectsApplication.text_BoxLineEffect2;
+                MediaEffect2.URL = effectsApplication.BoxLineEffect2.Text;
                 MediaEffect2.controls.currentPosition = timeEffect2;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
@@ -361,10 +363,10 @@ namespace Mp3Player
 
         private void playEffect3_Click(object sender, EventArgs e)
         {
-            if (effectsApplication.text_BoxLineEffect3 != "")
+            if (effectsApplication.BoxLineEffect3.Text != "")
             {
                 pauseEffects(3);
-                MediaEffect3.URL = effectsApplication.text_BoxLineEffect3;
+                MediaEffect3.URL = effectsApplication.BoxLineEffect3.Text;
                 MediaEffect3.controls.currentPosition = timeEffect3;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
@@ -379,10 +381,10 @@ namespace Mp3Player
 
         private void playEffect4_Click(object sender, EventArgs e)
         {
-            if (effectsApplication.text_BoxLineEffect4 != "")
+            if (effectsApplication.BoxLineEffect4.Text != "")
             {
                 pauseEffects(4);
-                MediaEffect4.URL = effectsApplication.text_BoxLineEffect4;
+                MediaEffect4.URL = effectsApplication.BoxLineEffect4.Text;
                 MediaEffect4.controls.currentPosition = timeEffect4;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
@@ -397,10 +399,10 @@ namespace Mp3Player
 
         private void playEffect5_Click(object sender, EventArgs e)
         {
-            if (effectsApplication.text_BoxLineEffect5 != "")
+            if (effectsApplication.BoxLineEffect5.Text != "")
             {
                 pauseEffects(5);
-                MediaEffect5.URL = effectsApplication.text_BoxLineEffect5;
+                MediaEffect5.URL = effectsApplication.BoxLineEffect5.Text;
                 MediaEffect5.controls.currentPosition = timeEffect5;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
@@ -415,10 +417,10 @@ namespace Mp3Player
 
         private void playEffect6_Click(object sender, EventArgs e)
         {
-            if (effectsApplication.text_BoxLineEffect6 != "")
+            if (effectsApplication.BoxLineEffect6.Text != "")
             {
                 pauseEffects(6);
-                MediaEffect6.URL = effectsApplication.text_BoxLineEffect6;
+                MediaEffect6.URL = effectsApplication.BoxLineEffect6.Text;
                 MediaEffect6.controls.currentPosition = timeEffect6;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
@@ -433,10 +435,10 @@ namespace Mp3Player
 
         private void playEffect7_Click(object sender, EventArgs e)
         {
-            if (effectsApplication.text_BoxLineEffect7 != "")
+            if (effectsApplication.BoxLineEffect7.Text != "")
             {
                 pauseEffects(7);
-                MediaEffect7.URL = effectsApplication.text_BoxLineEffect7;
+                MediaEffect7.URL = effectsApplication.BoxLineEffect8.Text;
                 MediaEffect7.controls.currentPosition = timeEffect7;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
@@ -451,10 +453,10 @@ namespace Mp3Player
 
         private void playEffect8_Click(object sender, EventArgs e)
         {
-            if (effectsApplication.text_BoxLineEffect8 != "")
+            if (effectsApplication.BoxLineEffect8.Text != "")
             {
                 pauseEffects(8);
-                MediaEffect8.URL = effectsApplication.text_BoxLineEffect8;
+                MediaEffect8.URL = effectsApplication.BoxLineEffect8.Text;
                 MediaEffect8.controls.currentPosition = timeEffect8;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
@@ -469,10 +471,10 @@ namespace Mp3Player
 
         private void playEffect9_Click(object sender, EventArgs e)
         {
-            if (effectsApplication.text_BoxLineEffect9 != "")
+            if (effectsApplication.BoxLineEffect9.Text != "")
             {
                 pauseEffects(9);
-                MediaEffect9.URL = effectsApplication.text_BoxLineEffect9;
+                MediaEffect9.URL = effectsApplication.BoxLineEffect9.Text;
                 MediaEffect9.controls.currentPosition = timeEffect9;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
@@ -487,10 +489,10 @@ namespace Mp3Player
 
         private void playEffect10_Click(object sender, EventArgs e)
         {
-            if (effectsApplication.text_BoxLineEffect10 != "")
+            if (effectsApplication.BoxLineEffect10.Text != "")
             {
                 pauseEffects(10);
-                MediaEffect10.URL = effectsApplication.text_BoxLineEffect10;
+                MediaEffect10.URL = effectsApplication.BoxLineEffect10.Text;
                 MediaEffect10.controls.currentPosition = timeEffect10;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
@@ -504,9 +506,9 @@ namespace Mp3Player
         }
 
         private void playEffect17_Click(object sender, EventArgs e) {
-            if (effectsApplication.text_BoxLineEffect17 != "") {
+            if (effectsApplication.BoxLineEffect17.Text != "") {
                 pauseEffects(17);
-                MediaEffect17.URL = effectsApplication.text_BoxLineEffect17;
+                MediaEffect17.URL = effectsApplication.BoxLineEffect17.Text;
                 MediaEffect17.controls.currentPosition = timeEffect17;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
@@ -520,129 +522,147 @@ namespace Mp3Player
         }
 
         private void playEffect12_Click(object sender, EventArgs e) {
-            pauseEffects(12);
-            MediaEffect12.URL = effectsApplication.text_BoxLineEffect12;
-            MediaEffect12.controls.currentPosition = timeEffect12;
+            if (effectsApplication.BoxLineEffect12.Text != "") {
+                pauseEffects(12);
+                MediaEffect12.URL = effectsApplication.BoxLineEffect12.Text;
+                MediaEffect12.controls.currentPosition = timeEffect12;
 
-            if (!settingsApp.SmoothStartStopCheck.Checked)
-                MediaEffect12.controls.play();
-            else
-                MP3Music.smoothStart(MediaEffect12);
+                if (!settingsApp.SmoothStartStopCheck.Checked)
+                    MediaEffect12.controls.play();
+                else
+                    MP3Music.smoothStart(MediaEffect12);
 
-            IsInitedEffect12 = true;
-            MP3Music.ReHideWidgets(pauseEffect12, playEffect12);
+                IsInitedEffect12 = true;
+                MP3Music.ReHideWidgets(pauseEffect12, playEffect12);
+            }
         }
 
         private void playEffect13_Click(object sender, EventArgs e) {
-            pauseEffects(13);
-            MediaEffect13.URL = effectsApplication.text_BoxLineEffect13;
-            MediaEffect13.controls.currentPosition = timeEffect13;
+            if (effectsApplication.BoxLineEffect13.Text != "") {
+                pauseEffects(13);
+                MediaEffect13.URL = effectsApplication.BoxLineEffect13.Text;
+                MediaEffect13.controls.currentPosition = timeEffect13;
 
-            if (!settingsApp.SmoothStartStopCheck.Checked)
-                MediaEffect13.controls.play();
-            else
-                MP3Music.smoothStart(MediaEffect13);
+                if (!settingsApp.SmoothStartStopCheck.Checked)
+                    MediaEffect13.controls.play();
+                else
+                    MP3Music.smoothStart(MediaEffect13);
 
-            IsInitedEffect13 = true;
-            MP3Music.ReHideWidgets(pauseEffect13, playEffect13);
+                IsInitedEffect13 = true;
+                MP3Music.ReHideWidgets(pauseEffect13, playEffect13);
+            }
         }
 
         private void playEffect14_Click(object sender, EventArgs e) {
-            pauseEffects(14);
-            MediaEffect14.URL = effectsApplication.text_BoxLineEffect14;
-            MediaEffect14.controls.currentPosition = timeEffect14;
+            if (effectsApplication.BoxLineEffect14.Text != "") {
+                pauseEffects(14);
+                MediaEffect14.URL = effectsApplication.BoxLineEffect14.Text;
+                MediaEffect14.controls.currentPosition = timeEffect14;
 
-            if (!settingsApp.SmoothStartStopCheck.Checked)
-                MediaEffect14.controls.play();
-            else
-                MP3Music.smoothStart(MediaEffect14);
+                if (!settingsApp.SmoothStartStopCheck.Checked)
+                    MediaEffect14.controls.play();
+                else
+                    MP3Music.smoothStart(MediaEffect14);
 
-            IsInitedEffect14 = true;
-            MP3Music.ReHideWidgets(pauseEffect14, playEffect14);
+                IsInitedEffect14 = true;
+                MP3Music.ReHideWidgets(pauseEffect14, playEffect14);
+            }
         }
 
         private void playEffect15_Click(object sender, EventArgs e) {
-            pauseEffects(15);
-            MediaEffect15.URL = effectsApplication.text_BoxLineEffect15;
-            MediaEffect15.controls.currentPosition = timeEffect15;
+            if (effectsApplication.BoxLineEffect15.Text != "") {
+                pauseEffects(15);
+                MediaEffect15.URL = effectsApplication.BoxLineEffect15.Text;
+                MediaEffect15.controls.currentPosition = timeEffect15;
 
-            if (!settingsApp.SmoothStartStopCheck.Checked)
-                MediaEffect15.controls.play();
-            else
-                MP3Music.smoothStart(MediaEffect15);
+                if (!settingsApp.SmoothStartStopCheck.Checked)
+                    MediaEffect15.controls.play();
+                else
+                    MP3Music.smoothStart(MediaEffect15);
 
-            IsInitedEffect15 = true;
-            MP3Music.ReHideWidgets(pauseEffect15, playEffect15);
+                IsInitedEffect15 = true;
+                MP3Music.ReHideWidgets(pauseEffect15, playEffect15);
+            }
         }
 
         private void playEffect16_Click(object sender, EventArgs e) {
-            pauseEffects(16);
-            MediaEffect16.URL = effectsApplication.text_BoxLineEffect16;
-            MediaEffect16.controls.currentPosition = timeEffect16;
+            if (effectsApplication.BoxLineEffect16.Text != "") {
+                pauseEffects(16);
+                MediaEffect16.URL = effectsApplication.BoxLineEffect16.Text;
+                MediaEffect16.controls.currentPosition = timeEffect16;
 
-            if (!settingsApp.SmoothStartStopCheck.Checked)
-                MediaEffect16.controls.play();
-            else
-                MP3Music.smoothStart(MediaEffect16);
+                if (!settingsApp.SmoothStartStopCheck.Checked)
+                    MediaEffect16.controls.play();
+                else
+                    MP3Music.smoothStart(MediaEffect16);
 
-            IsInitedEffect16 = true;
-            MP3Music.ReHideWidgets(pauseEffect16, playEffect16);
+                IsInitedEffect16 = true;
+                MP3Music.ReHideWidgets(pauseEffect16, playEffect16);
+            }
         }
 
         private void playEffect11_Click(object sender, EventArgs e) {
-            pauseEffects(11);
-            MediaEffect11.URL = effectsApplication.text_BoxLineEffect11;
-            MediaEffect11.controls.currentPosition = timeEffect11;
+            if (effectsApplication.BoxLineEffect11.Text != "") {
+                pauseEffects(11);
+                MediaEffect11.URL = effectsApplication.BoxLineEffect11.Text;
+                MediaEffect11.controls.currentPosition = timeEffect11;
 
-            if (!settingsApp.SmoothStartStopCheck.Checked)
-                MediaEffect11.controls.play();
-            else
-                MP3Music.smoothStart(MediaEffect11);
+                if (!settingsApp.SmoothStartStopCheck.Checked)
+                    MediaEffect11.controls.play();
+                else
+                    MP3Music.smoothStart(MediaEffect11);
 
-            IsInitedEffect11 = true;
-            MP3Music.ReHideWidgets(pauseEffect11, playEffect11);
+                IsInitedEffect11 = true;
+                MP3Music.ReHideWidgets(pauseEffect11, playEffect11);
+            }
         }
 
         private void playEffect18_Click(object sender, EventArgs e) {
-            pauseEffects(18);
-            MediaEffect18.URL = effectsApplication.text_BoxLineEffect18;
-            MediaEffect18.controls.currentPosition = timeEffect18;
+            if (effectsApplication.BoxLineEffect18.Text != "") {
+                pauseEffects(18);
+                MediaEffect18.URL = effectsApplication.BoxLineEffect18.Text;
+                MediaEffect18.controls.currentPosition = timeEffect18;
 
-            if (!settingsApp.SmoothStartStopCheck.Checked)
-                MediaEffect18.controls.play();
-            else
-                MP3Music.smoothStart(MediaEffect18);
+                if (!settingsApp.SmoothStartStopCheck.Checked)
+                    MediaEffect18.controls.play();
+                else
+                    MP3Music.smoothStart(MediaEffect18);
 
-            IsInitedEffect18 = true;
-            MP3Music.ReHideWidgets(pauseEffect18, playEffect18);
+                IsInitedEffect18 = true;
+                MP3Music.ReHideWidgets(pauseEffect18, playEffect18);
+            }
         }
 
         private void playEffect19_Click(object sender, EventArgs e) {
-            pauseEffects(19);
-            MediaEffect19.URL = effectsApplication.text_BoxLineEffect19;
-            MediaEffect19.controls.currentPosition = timeEffect19;
+            if (effectsApplication.BoxLineEffect19.Text != "") {
+                pauseEffects(19);
+                MediaEffect19.URL = effectsApplication.BoxLineEffect19.Text;
+                MediaEffect19.controls.currentPosition = timeEffect19;
 
-            if (!settingsApp.SmoothStartStopCheck.Checked)
-                MediaEffect19.controls.play();
-            else
-                MP3Music.smoothStart(MediaEffect19);
+                if (!settingsApp.SmoothStartStopCheck.Checked)
+                    MediaEffect19.controls.play();
+                else
+                    MP3Music.smoothStart(MediaEffect19);
 
-            IsInitedEffect19 = true;
-            MP3Music.ReHideWidgets(pauseEffect19, playEffect19);
+                IsInitedEffect19 = true;
+                MP3Music.ReHideWidgets(pauseEffect19, playEffect19);
+            }
         }
 
         private void playEffect20_Click(object sender, EventArgs e) {
-            pauseEffects(20);
+            if (effectsApplication.BoxLineEffect20.Text != "") {
+                pauseEffects(20);
 
-            if (!settingsApp.SmoothStartStopCheck.Checked)
-                MediaEffect20.controls.play();
-            else
-                MP3Music.smoothStart(MediaEffect20);
+                if (!settingsApp.SmoothStartStopCheck.Checked)
+                    MediaEffect20.controls.play();
+                else
+                    MP3Music.smoothStart(MediaEffect20);
 
-            MediaEffect20.URL = effectsApplication.text_BoxLineEffect20;
-            MediaEffect20.controls.currentPosition = timeEffect20;
-            IsInitedEffect20 = true;
-            MP3Music.ReHideWidgets(pauseEffect20, playEffect20);
+                MediaEffect20.URL = effectsApplication.BoxLineEffect20.Text;
+                MediaEffect20.controls.currentPosition = timeEffect20;
+                IsInitedEffect20 = true;
+                MP3Music.ReHideWidgets(pauseEffect20, playEffect20);
+            }
         }
 
         public async void pauseEffect_Click(object sender, EventArgs e)
@@ -1084,183 +1104,223 @@ namespace Mp3Player
         }
 
         private void progressBarEffect_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect.Bounds.X);
-            calcFactor = progressBarEffect.Width / (float)progressBarEffect.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect.Bounds.X);
+                calcFactor = progressBarEffect.Width / (float)progressBarEffect.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect.controls.currentPosition = relativeMouse;
+                progressBarEffect.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect2_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect2.Bounds.X);
-            calcFactor = progressBarEffect2.Width / (float)progressBarEffect2.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect2.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect2.Bounds.X);
+                calcFactor = progressBarEffect2.Width / (float)progressBarEffect2.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect2.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect2.controls.currentPosition = relativeMouse;
+                progressBarEffect2.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect2.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect3_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect3.Bounds.X);
-            calcFactor = progressBarEffect3.Width / (float)progressBarEffect3.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect3.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect3.Bounds.X);
+                calcFactor = progressBarEffect3.Width / (float)progressBarEffect3.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect3.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect3.controls.currentPosition = relativeMouse;
+                progressBarEffect3.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect3.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect4_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect4.Bounds.X);
-            calcFactor = progressBarEffect4.Width / (float)progressBarEffect4.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect4.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect4.Bounds.X);
+                calcFactor = progressBarEffect4.Width / (float)progressBarEffect4.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect4.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect4.controls.currentPosition = relativeMouse;
+                progressBarEffect4.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect4.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect5_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect5.Bounds.X);
-            calcFactor = progressBarEffect5.Width / (float)progressBarEffect5.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect5.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect5.Bounds.X);
+                calcFactor = progressBarEffect5.Width / (float)progressBarEffect5.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect5.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect5.controls.currentPosition = relativeMouse;
+                progressBarEffect5.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect5.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect6_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect6.Bounds.X);
-            calcFactor = progressBarEffect6.Width / (float)progressBarEffect6.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect6.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect6.Bounds.X);
+                calcFactor = progressBarEffect6.Width / (float)progressBarEffect6.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect6.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect6.controls.currentPosition = relativeMouse;
+                progressBarEffect6.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect6.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect7_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect7.Bounds.X);
-            calcFactor = progressBarEffect7.Width / (float)progressBarEffect7.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect7.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect7.Bounds.X);
+                calcFactor = progressBarEffect7.Width / (float)progressBarEffect7.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect7.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect7.controls.currentPosition = relativeMouse;
+                progressBarEffect7.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect7.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect8_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect8.Bounds.X);
-            calcFactor = progressBarEffect8.Width / (float)progressBarEffect8.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect8.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect8.Bounds.X);
+                calcFactor = progressBarEffect8.Width / (float)progressBarEffect8.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect8.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect8.controls.currentPosition = relativeMouse;
+                progressBarEffect8.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect8.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect9_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect9.Bounds.X);
-            calcFactor = progressBarEffect9.Width / (float)progressBarEffect9.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect9.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect9.Bounds.X);
+                calcFactor = progressBarEffect9.Width / (float)progressBarEffect9.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect9.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect9.controls.currentPosition = relativeMouse;
+                progressBarEffect9.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect9.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect10_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect10.Bounds.X);
-            calcFactor = progressBarEffect10.Width / (float)progressBarEffect10.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect10.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect10.Bounds.X);
+                calcFactor = progressBarEffect10.Width / (float)progressBarEffect10.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect10.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect10.controls.currentPosition = relativeMouse;
+                progressBarEffect10.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect10.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect11_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect11.Bounds.X);
-            calcFactor = progressBarEffect11.Width / (float)progressBarEffect11.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect11.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect11.Bounds.X);
+                calcFactor = progressBarEffect11.Width / (float)progressBarEffect11.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect11.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect11.controls.currentPosition = relativeMouse;
+                progressBarEffect11.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect11.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect12_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect12.Bounds.X);
-            calcFactor = progressBarEffect12.Width / (float)progressBarEffect12.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect12.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect12.Bounds.X);
+                calcFactor = progressBarEffect12.Width / (float)progressBarEffect12.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect12.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect12.controls.currentPosition = relativeMouse;
+                progressBarEffect12.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect12.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect13_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect13.Bounds.X);
-            calcFactor = progressBarEffect13.Width / (float)progressBarEffect13.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect13.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect13.Bounds.X);
+                calcFactor = progressBarEffect13.Width / (float)progressBarEffect13.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect13.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect13.controls.currentPosition = relativeMouse;
+                progressBarEffect13.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect13.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect14_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect14.Bounds.X);
-            calcFactor = progressBarEffect14.Width / (float)progressBarEffect14.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect14.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect14.Bounds.X);
+                calcFactor = progressBarEffect14.Width / (float)progressBarEffect14.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect14.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect14.controls.currentPosition = relativeMouse;
+                progressBarEffect14.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect14.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect15_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect15.Bounds.X);
-            calcFactor = progressBarEffect15.Width / (float)progressBarEffect15.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect15.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect15.Bounds.X);
+                calcFactor = progressBarEffect15.Width / (float)progressBarEffect15.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect15.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect15.controls.currentPosition = relativeMouse;
+                progressBarEffect15.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect15.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect16_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect16.Bounds.X);
-            calcFactor = progressBarEffect16.Width / (float)progressBarEffect16.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect16.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect16.Bounds.X);
+                calcFactor = progressBarEffect16.Width / (float)progressBarEffect16.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect16.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect16.controls.currentPosition = relativeMouse;
+                progressBarEffect16.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect16.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect17_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect17.Bounds.X);
-            calcFactor = progressBarEffect17.Width / (float)progressBarEffect17.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect17.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect17.Bounds.X);
+                calcFactor = progressBarEffect17.Width / (float)progressBarEffect17.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect17.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect17.controls.currentPosition = relativeMouse;
+                progressBarEffect17.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect17.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect18_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect18.Bounds.X);
-            calcFactor = progressBarEffect18.Width / (float)progressBarEffect18.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect18.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect18.Bounds.X);
+                calcFactor = progressBarEffect18.Width / (float)progressBarEffect18.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect18.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect18.controls.currentPosition = relativeMouse;
+                progressBarEffect18.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect18.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect19_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect19.Bounds.X);
-            calcFactor = progressBarEffect19.Width / (float)progressBarEffect19.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect19.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect19.Bounds.X);
+                calcFactor = progressBarEffect19.Width / (float)progressBarEffect19.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect19.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect19.controls.currentPosition = relativeMouse;
+                progressBarEffect19.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect19.controls.currentPosition = relativeMouse;
+            }
         }
 
         private void progressBarEffect20_Click(object sender, EventArgs e) {
-            absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect20.Bounds.X);
-            calcFactor = progressBarEffect20.Width / (float)progressBarEffect20.Maximum;
-            relativeMouse = absoluteMouse / calcFactor;
+            if (effectsApplication.BoxLineEffect20.Text != "") {
+                absoluteMouse = (PointToClient(MousePosition).X - progressBarEffect20.Bounds.X);
+                calcFactor = progressBarEffect20.Width / (float)progressBarEffect20.Maximum;
+                relativeMouse = absoluteMouse / calcFactor;
 
-            progressBarEffect20.Value = Convert.ToInt32(relativeMouse);
-            MediaEffect20.controls.currentPosition = relativeMouse;
+                progressBarEffect20.Value = Convert.ToInt32(relativeMouse);
+                MediaEffect20.controls.currentPosition = relativeMouse;
+            }
         }
         #endregion Effect
 
@@ -1520,27 +1580,6 @@ namespace Mp3Player
                     }
                 }
             } catch { }
-
-            EffectName.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect);
-            EffectName2.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect2);
-            EffectName3.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect3);
-            EffectName4.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect4);
-            EffectName5.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect5);
-            EffectName6.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect6);
-            EffectName7.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect7);
-            EffectName8.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect8);
-            EffectName9.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect9);
-            EffectName10.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect10);
-            EffectName11.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect11);
-            EffectName12.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect12);
-            EffectName13.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect13);
-            EffectName14.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect14);
-            EffectName15.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect15);
-            EffectName16.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect16);
-            EffectName17.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect17);
-            EffectName18.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect18);
-            EffectName19.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect19);
-            EffectName20.Text = Path.GetFileName(effectsApplication.text_BoxLineEffect20);
         }
         private void button1_Click(object sender, EventArgs e) => Application.Exit();
         private void SettingsButton_Click(object sender, EventArgs e) => effectsApplication.Show();
