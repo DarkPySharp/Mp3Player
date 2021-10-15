@@ -1688,7 +1688,7 @@ namespace Mp3Player
                 DJ_SHARP.transisting = false;
             }
         }
-        public static void ReHideWidgets(Button Show, Button Hide) { Show.Show(); Hide.Hide(); }
+        public static void ReHideWidgets(Control Show, Control Hide) { Show.Show(); Hide.Hide(); }
     }
     public class InteregetArgs
     {
