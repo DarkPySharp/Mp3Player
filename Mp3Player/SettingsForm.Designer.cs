@@ -31,6 +31,7 @@ namespace Mp3Player
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MinimizeWindow = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.LabelTag = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -49,6 +50,7 @@ namespace Mp3Player
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.MinimizeWindow);
             this.panel1.Controls.Add(this.closeButton);
             this.panel1.Controls.Add(this.LabelTag);
             this.panel1.Controls.Add(this.button1);
@@ -57,6 +59,19 @@ namespace Mp3Player
             this.panel1.Size = new System.Drawing.Size(301, 26);
             this.panel1.TabIndex = 4;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // MinimizeWindow
+            // 
+            this.MinimizeWindow.BackColor = System.Drawing.Color.Red;
+            this.MinimizeWindow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MinimizeWindow.BackgroundImage")));
+            this.MinimizeWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MinimizeWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinimizeWindow.Location = new System.Drawing.Point(257, 3);
+            this.MinimizeWindow.Name = "MinimizeWindow";
+            this.MinimizeWindow.Size = new System.Drawing.Size(20, 20);
+            this.MinimizeWindow.TabIndex = 51;
+            this.MinimizeWindow.UseVisualStyleBackColor = false;
+            this.MinimizeWindow.Click += new System.EventHandler(this.MinimizeWindow_Click);
             // 
             // closeButton
             // 
@@ -221,5 +236,6 @@ namespace Mp3Player
         private System.Windows.Forms.Button SaveInFile;
         public System.Windows.Forms.CheckBox MultiMusicRadio;
         public System.Windows.Forms.CheckBox SmoothStartStopCheck;
+        private System.Windows.Forms.Button MinimizeWindow;
     }
 }

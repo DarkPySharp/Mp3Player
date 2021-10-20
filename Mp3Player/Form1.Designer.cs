@@ -35,6 +35,7 @@ namespace Mp3Player
             this.PauseButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MinimizeWindow = new System.Windows.Forms.Button();
             this.SettingsDJ = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -200,6 +201,7 @@ namespace Mp3Player
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.MinimizeWindow);
             this.panel1.Controls.Add(this.SettingsDJ);
             this.panel1.Controls.Add(this.SettingsButton);
             this.panel1.Controls.Add(this.label1);
@@ -210,12 +212,25 @@ namespace Mp3Player
             this.panel1.TabIndex = 3;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_Down);
             // 
+            // MinimizeWindow
+            // 
+            this.MinimizeWindow.BackColor = System.Drawing.Color.Red;
+            this.MinimizeWindow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MinimizeWindow.BackgroundImage")));
+            this.MinimizeWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MinimizeWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinimizeWindow.Location = new System.Drawing.Point(759, 3);
+            this.MinimizeWindow.Name = "MinimizeWindow";
+            this.MinimizeWindow.Size = new System.Drawing.Size(20, 20);
+            this.MinimizeWindow.TabIndex = 50;
+            this.MinimizeWindow.UseVisualStyleBackColor = false;
+            this.MinimizeWindow.Click += new System.EventHandler(this.MinimizeWindow_Click);
+            // 
             // SettingsDJ
             // 
             this.SettingsDJ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SettingsDJ.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SettingsDJ.ForeColor = System.Drawing.Color.White;
-            this.SettingsDJ.Location = new System.Drawing.Point(51, 0);
+            this.SettingsDJ.Location = new System.Drawing.Point(51, 1);
             this.SettingsDJ.Name = "SettingsDJ";
             this.SettingsDJ.Size = new System.Drawing.Size(53, 23);
             this.SettingsDJ.TabIndex = 48;
@@ -228,7 +243,7 @@ namespace Mp3Player
             this.SettingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SettingsButton.ForeColor = System.Drawing.Color.White;
-            this.SettingsButton.Location = new System.Drawing.Point(3, 0);
+            this.SettingsButton.Location = new System.Drawing.Point(3, 1);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(48, 23);
             this.SettingsButton.TabIndex = 47;
@@ -1730,6 +1745,7 @@ namespace Mp3Player
         private System.Windows.Forms.Button playEffect11;
         public System.Windows.Forms.TrackBar VolumeEffects;
         public System.Windows.Forms.ProgressBar progressBarEffect;
+        private System.Windows.Forms.Button MinimizeWindow;
     }
 }
 

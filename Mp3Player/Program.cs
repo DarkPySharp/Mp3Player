@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -19,6 +18,6 @@ namespace Mp3Player
             Application.Run(new DJ_SHARP());
         }
 
-        private static void Except(object sender, ThreadExceptionEventArgs e) => MessageBox.Show(e.Exception.ToString(), "DJ-Sharp", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        private static void Except(object sender, ThreadExceptionEventArgs e) { MessageBox.Show(e.Exception.ToString(), "DJ-Sharp", MessageBoxButtons.OK, MessageBoxIcon.Error); }
     }
 }

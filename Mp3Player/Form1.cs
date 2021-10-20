@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,9 +11,9 @@ namespace Mp3Player
     public partial class DJ_SHARP : Form
     {
         #region variable
-        WindowsMediaPlayer MainMedia = new WindowsMediaPlayer(); // медиа компоненты
+        WindowsMediaPlayer MainMedia = new WindowsMediaPlayer();
         WindowsMediaPlayer SecondMedia = new WindowsMediaPlayer();
-        public WindowsMediaPlayer MediaEffect = new WindowsMediaPlayer();
+        WindowsMediaPlayer MediaEffect = new WindowsMediaPlayer();
         WindowsMediaPlayer MediaEffect2 = new WindowsMediaPlayer();
         WindowsMediaPlayer MediaEffect3 = new WindowsMediaPlayer();
         WindowsMediaPlayer MediaEffect4 = new WindowsMediaPlayer();
@@ -156,7 +155,7 @@ namespace Mp3Player
                 } catch { }
             }
 
-             effectsApplication = new TakeMusic(this);
+            effectsApplication = new TakeMusic(this);
         }
 
         #region MainMusic
@@ -201,7 +200,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MainMedia.controls.pause();
             else
-                await MP3Music.smoothStop(MainMedia);
+                await MP3Music.smoothStop(MainMedia, PauseButton);
 
             time = MainMedia.controls.currentPosition;
             musicIsPlaying = false;
@@ -278,7 +277,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 SecondMedia.controls.pause();
             else
-                await MP3Music.smoothStop(SecondMedia);
+                await MP3Music.smoothStop(SecondMedia, PauseButtonSecond);
 
             timeSecond = SecondMedia.controls.currentPosition;
             musicIsPlaying = false;
@@ -670,7 +669,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect);
+                await MP3Music.smoothStop(MediaEffect, pauseEffect);
 
             timeEffect = MediaEffect.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect, pauseEffect);
@@ -681,7 +680,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect2.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect2);
+                await MP3Music.smoothStop(MediaEffect2, pauseEffect2);
 
             timeEffect2 = MediaEffect2.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect2, pauseEffect2);
@@ -692,7 +691,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect3.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect3);
+                await MP3Music.smoothStop(MediaEffect3, pauseEffect3);
 
             timeEffect3 = MediaEffect3.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect3, pauseEffect3);
@@ -703,7 +702,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect4.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect4);
+                await MP3Music.smoothStop(MediaEffect4, pauseEffect4);
 
             timeEffect4 = MediaEffect4.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect4, pauseEffect4);
@@ -714,7 +713,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect5.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect5);
+                await MP3Music.smoothStop(MediaEffect5, pauseEffect5);
 
             timeEffect5 = MediaEffect5.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect5, pauseEffect5);
@@ -725,7 +724,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect6.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect6);
+                await MP3Music.smoothStop(MediaEffect6, pauseEffect6);
 
             timeEffect6 = MediaEffect6.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect6, pauseEffect6);
@@ -736,7 +735,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect7.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect7);
+                await MP3Music.smoothStop(MediaEffect7, pauseEffect7);
 
             timeEffect7 = MediaEffect7.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect7, pauseEffect7);
@@ -747,7 +746,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect8.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect8);
+                await MP3Music.smoothStop(MediaEffect8, pauseEffect8);
 
             timeEffect8 = MediaEffect8.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect8, pauseEffect8);
@@ -758,7 +757,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect9.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect9);
+                await MP3Music.smoothStop(MediaEffect9, pauseEffect9);
 
             timeEffect9 = MediaEffect9.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect9, pauseEffect9);
@@ -769,7 +768,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect10.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect10);
+                await MP3Music.smoothStop(MediaEffect10, pauseEffect10);
 
             timeEffect10 = MediaEffect10.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect10, pauseEffect10);
@@ -779,7 +778,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect17.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect17);
+                await MP3Music.smoothStop(MediaEffect17, pauseEffect17);
 
             timeEffect17 = MediaEffect17.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect17, pauseEffect17);
@@ -789,7 +788,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect12.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect12);
+                await MP3Music.smoothStop(MediaEffect12, pauseEffect12);
 
             timeEffect12 = MediaEffect12.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect12, pauseEffect12);
@@ -799,7 +798,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect13.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect13);
+                await MP3Music.smoothStop(MediaEffect13, pauseEffect13);
 
             timeEffect13 = MediaEffect13.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect13, pauseEffect13);
@@ -809,7 +808,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect14.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect14);
+                await MP3Music.smoothStop(MediaEffect14, pauseEffect14);
 
             timeEffect14 = MediaEffect14.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect14, pauseEffect14);
@@ -819,7 +818,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect15.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect15);
+                await MP3Music.smoothStop(MediaEffect15, pauseEffect15);
 
             timeEffect15 = MediaEffect15.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect15, pauseEffect15);
@@ -829,7 +828,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect16.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect16);
+                await MP3Music.smoothStop(MediaEffect16, pauseEffect16);
 
             timeEffect16 = MediaEffect16.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect16, pauseEffect16);
@@ -839,7 +838,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect11.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect11);
+                await MP3Music.smoothStop(MediaEffect11, pauseEffect11);
 
             timeEffect11 = MediaEffect11.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect11, pauseEffect11);
@@ -849,7 +848,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect18.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect18);
+                await MP3Music.smoothStop(MediaEffect18, pauseEffect18);
 
             timeEffect18 = MediaEffect18.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect18, pauseEffect18);
@@ -859,7 +858,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect19.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect19);
+                await MP3Music.smoothStop(MediaEffect19, pauseEffect19);
 
             timeEffect19 = MediaEffect19.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect19, pauseEffect19);
@@ -869,7 +868,7 @@ namespace Mp3Player
             if (!settingsApp.SmoothStartStopCheck.Checked)
                 MediaEffect20.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect20);
+                await MP3Music.smoothStop(MediaEffect20, pauseEffect20);
 
             timeEffect20 = MediaEffect20.controls.currentPosition;
             MP3Music.ReHideWidgets(playEffect20, pauseEffect20);
@@ -1332,7 +1331,7 @@ namespace Mp3Player
                 if (MainMusicIsInited)
                 {
                     progressBarMainMusic.Maximum = Convert.ToInt32(MainMedia.currentMedia.duration);
-                    progressBarMainMusic.Value = Convert.ToInt32(MainMedia.controls.currentPosition); // беды с указанием позиции
+                    progressBarMainMusic.Value = Convert.ToInt32(MainMedia.controls.currentPosition);
 
                     if (progressBarMainMusic.Value == progressBarMainMusic.Maximum-1 & WhileMain.Checked)
                         MainMedia.controls.currentPosition = 0.1;
@@ -1361,8 +1360,8 @@ namespace Mp3Player
                 }
                 if (IsInitedEffect)
                 {
-                    progressBarEffect.Maximum = Convert.ToInt32(MediaEffect.currentMedia.duration);
-                    progressBarEffect.Value = Convert.ToInt32(MediaEffect.controls.currentPosition);
+                    progressBarEffect.Maximum = Convert.ToInt32(MediaEffect?.currentMedia.duration);
+                    progressBarEffect.Value = Convert.ToInt32(MediaEffect?.controls.currentPosition);
 
                     if (progressBarEffect.Value == progressBarEffect.Maximum - 1)
                     {
@@ -1584,6 +1583,7 @@ namespace Mp3Player
         private void button1_Click(object sender, EventArgs e) => Application.Exit();
         private void SettingsButton_Click(object sender, EventArgs e) => effectsApplication.Show();
         private void SettingsDJ_Click(object sender, EventArgs e) => settingsApp.Show();
+        private void MinimizeWindow_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;
 
         private void DownClicedLabel(object sender, MouseEventArgs e) {
             if (e.Button == MouseButtons.Left) {
@@ -1603,8 +1603,7 @@ namespace Mp3Player
         #region Volume
         private void VolumeMain_ValueChanged(object sender, EventArgs e)
         {
-            if (MainMedia != null)
-                MainMedia.settings.volume = VolumeMain.Value;
+            MainMedia.settings.volume = VolumeMain.Value;
             SecondMedia.settings.volume = VolumeMain.Value;
             MainVolume = VolumeMain.Value;
         }
@@ -1646,14 +1645,16 @@ namespace Mp3Player
 
             player.settings.volume = TakedVolume;
         }
-        public static async Task smoothStop(WindowsMediaPlayer player) {
+        public static async Task smoothStop(WindowsMediaPlayer player, Control Widget) {
             int vol = player.settings.volume;
+            Widget.Enabled = false;
 
             for (int volume = vol; volume > 0; volume -= 2, await Task.Delay(DJ_SHARP.delayTransition / 2)) { player.settings.volume = volume; }
 
             player.controls.pause();
-            await Task.Delay(1);
+            await Task.Delay(2);
             player.settings.volume = vol;
+            Widget.Enabled = true;
         }
         public static void treads(object pocket)
         {

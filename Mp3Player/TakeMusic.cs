@@ -397,5 +397,9 @@ namespace Mp3Player
             Root.EffectName20.Text = Path.GetFileName(BoxLineEffect20.Text);
         }
         #endregion
+
+        private void MinimizeWindow_Click(object sender, EventArgs e) {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -88,5 +88,9 @@ namespace Mp3Player
             MultiMusicRadio.Checked = CheckedStatus;
             SmoothStartStopCheck.Checked = CheckedStatusSmooth;
         }
+
+        private void MinimizeWindow_Click(object sender, EventArgs e) {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }
