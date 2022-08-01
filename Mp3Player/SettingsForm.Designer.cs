@@ -44,6 +44,7 @@ namespace Mp3Player
             this.SaveInFile = new System.Windows.Forms.Button();
             this.MultiMusicRadio = new System.Windows.Forms.CheckBox();
             this.SmoothStartStopCheck = new System.Windows.Forms.CheckBox();
+            this.FullMultiMusic = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,7 +167,7 @@ namespace Mp3Player
             // 
             // SaveInFile
             // 
-            this.SaveInFile.Location = new System.Drawing.Point(229, 107);
+            this.SaveInFile.Location = new System.Drawing.Point(230, 117);
             this.SaveInFile.Name = "SaveInFile";
             this.SaveInFile.Size = new System.Drawing.Size(68, 23);
             this.SaveInFile.TabIndex = 11;
@@ -183,22 +184,35 @@ namespace Mp3Player
             this.MultiMusicRadio.TabIndex = 12;
             this.MultiMusicRadio.Text = "Использовать несколько эффектов одновременно";
             this.MultiMusicRadio.UseVisualStyleBackColor = true;
+            this.MultiMusicRadio.CheckedChanged += new System.EventHandler(this.MultiMusicRadio_CheckedChanged);
             // 
             // SmoothStartStopCheck
             // 
             this.SmoothStartStopCheck.AutoSize = true;
-            this.SmoothStartStopCheck.Location = new System.Drawing.Point(3, 105);
+            this.SmoothStartStopCheck.Location = new System.Drawing.Point(3, 124);
             this.SmoothStartStopCheck.Name = "SmoothStartStopCheck";
             this.SmoothStartStopCheck.Size = new System.Drawing.Size(134, 17);
             this.SmoothStartStopCheck.TabIndex = 13;
             this.SmoothStartStopCheck.Text = "Плавный старт | стоп";
             this.SmoothStartStopCheck.UseVisualStyleBackColor = true;
             // 
+            // FullMultiMusic
+            // 
+            this.FullMultiMusic.AutoSize = true;
+            this.FullMultiMusic.Location = new System.Drawing.Point(3, 107);
+            this.FullMultiMusic.Name = "FullMultiMusic";
+            this.FullMultiMusic.Size = new System.Drawing.Size(143, 17);
+            this.FullMultiMusic.TabIndex = 14;
+            this.FullMultiMusic.Text = "Блокировка MultyMusic";
+            this.FullMultiMusic.UseVisualStyleBackColor = true;
+            this.FullMultiMusic.CheckedChanged += new System.EventHandler(this.FullMultiMusic_CheckedChanged);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 131);
+            this.ClientSize = new System.Drawing.Size(300, 141);
+            this.Controls.Add(this.FullMultiMusic);
             this.Controls.Add(this.SmoothStartStopCheck);
             this.Controls.Add(this.MultiMusicRadio);
             this.Controls.Add(this.SaveInFile);
@@ -237,5 +251,6 @@ namespace Mp3Player
         public System.Windows.Forms.CheckBox MultiMusicRadio;
         public System.Windows.Forms.CheckBox SmoothStartStopCheck;
         private System.Windows.Forms.Button MinimizeWindow;
+        public System.Windows.Forms.CheckBox FullMultiMusic;
     }
 }

@@ -43,22 +43,52 @@ namespace Mp3Player
             this.OpenMainMusic = new System.Windows.Forms.Button();
             this.progressBarMainMusic = new System.Windows.Forms.ProgressBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.WhileEffect2 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect3 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect4 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect5 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect6 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect7 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect8 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect9 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect10 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect11 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect12 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect13 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect14 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect15 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect16 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect17 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect18 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect19 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect20 = new System.Windows.Forms.CheckBox();
+            this.WhileEffect = new System.Windows.Forms.CheckBox();
+            this.EffectName12 = new System.Windows.Forms.TextBox();
             this.playEffect20 = new System.Windows.Forms.Button();
             this.ResetEffect19 = new System.Windows.Forms.Button();
+            this.EffectName13 = new System.Windows.Forms.TextBox();
             this.ResetEffect13 = new System.Windows.Forms.Button();
             this.playEffect19 = new System.Windows.Forms.Button();
+            this.EffectName14 = new System.Windows.Forms.TextBox();
             this.ResetEffect11 = new System.Windows.Forms.Button();
             this.ResetEffect12 = new System.Windows.Forms.Button();
+            this.EffectName15 = new System.Windows.Forms.TextBox();
             this.playEffect18 = new System.Windows.Forms.Button();
+            this.EffectName16 = new System.Windows.Forms.TextBox();
             this.ResetEffect14 = new System.Windows.Forms.Button();
             this.ResetEffect15 = new System.Windows.Forms.Button();
+            this.EffectName17 = new System.Windows.Forms.TextBox();
             this.playEffect17 = new System.Windows.Forms.Button();
             this.ResetEffect16 = new System.Windows.Forms.Button();
+            this.EffectName18 = new System.Windows.Forms.TextBox();
             this.ResetEffect17 = new System.Windows.Forms.Button();
+            this.EffectName19 = new System.Windows.Forms.TextBox();
             this.playEffect16 = new System.Windows.Forms.Button();
             this.ResetEffect18 = new System.Windows.Forms.Button();
+            this.EffectName20 = new System.Windows.Forms.TextBox();
             this.ResetEffect20 = new System.Windows.Forms.Button();
             this.playEffect15 = new System.Windows.Forms.Button();
+            this.EffectName11 = new System.Windows.Forms.TextBox();
             this.progressBarEffect16 = new System.Windows.Forms.ProgressBar();
             this.playEffect14 = new System.Windows.Forms.Button();
             this.progressBarEffect20 = new System.Windows.Forms.ProgressBar();
@@ -146,16 +176,8 @@ namespace Mp3Player
             this.panel2 = new System.Windows.Forms.Panel();
             this.WhileMain = new System.Windows.Forms.CheckBox();
             this.WhileSecond = new System.Windows.Forms.CheckBox();
-            this.EffectName12 = new System.Windows.Forms.TextBox();
-            this.EffectName13 = new System.Windows.Forms.TextBox();
-            this.EffectName14 = new System.Windows.Forms.TextBox();
-            this.EffectName15 = new System.Windows.Forms.TextBox();
-            this.EffectName16 = new System.Windows.Forms.TextBox();
-            this.EffectName17 = new System.Windows.Forms.TextBox();
-            this.EffectName18 = new System.Windows.Forms.TextBox();
-            this.EffectName19 = new System.Windows.Forms.TextBox();
-            this.EffectName20 = new System.Windows.Forms.TextBox();
-            this.EffectName11 = new System.Windows.Forms.TextBox();
+            this.AllStopButton = new System.Windows.Forms.Button();
+            this.AllResetButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeMain)).BeginInit();
@@ -300,22 +322,52 @@ namespace Mp3Player
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.WhileEffect2);
+            this.groupBox1.Controls.Add(this.WhileEffect3);
+            this.groupBox1.Controls.Add(this.WhileEffect4);
+            this.groupBox1.Controls.Add(this.WhileEffect5);
+            this.groupBox1.Controls.Add(this.WhileEffect6);
+            this.groupBox1.Controls.Add(this.WhileEffect7);
+            this.groupBox1.Controls.Add(this.WhileEffect8);
+            this.groupBox1.Controls.Add(this.WhileEffect9);
+            this.groupBox1.Controls.Add(this.WhileEffect10);
+            this.groupBox1.Controls.Add(this.WhileEffect11);
+            this.groupBox1.Controls.Add(this.WhileEffect12);
+            this.groupBox1.Controls.Add(this.WhileEffect13);
+            this.groupBox1.Controls.Add(this.WhileEffect14);
+            this.groupBox1.Controls.Add(this.WhileEffect15);
+            this.groupBox1.Controls.Add(this.WhileEffect16);
+            this.groupBox1.Controls.Add(this.WhileEffect17);
+            this.groupBox1.Controls.Add(this.WhileEffect18);
+            this.groupBox1.Controls.Add(this.WhileEffect19);
+            this.groupBox1.Controls.Add(this.WhileEffect20);
+            this.groupBox1.Controls.Add(this.WhileEffect);
+            this.groupBox1.Controls.Add(this.EffectName12);
             this.groupBox1.Controls.Add(this.playEffect20);
             this.groupBox1.Controls.Add(this.ResetEffect19);
+            this.groupBox1.Controls.Add(this.EffectName13);
             this.groupBox1.Controls.Add(this.ResetEffect13);
             this.groupBox1.Controls.Add(this.playEffect19);
+            this.groupBox1.Controls.Add(this.EffectName14);
             this.groupBox1.Controls.Add(this.ResetEffect11);
             this.groupBox1.Controls.Add(this.ResetEffect12);
+            this.groupBox1.Controls.Add(this.EffectName15);
             this.groupBox1.Controls.Add(this.playEffect18);
+            this.groupBox1.Controls.Add(this.EffectName16);
             this.groupBox1.Controls.Add(this.ResetEffect14);
             this.groupBox1.Controls.Add(this.ResetEffect15);
+            this.groupBox1.Controls.Add(this.EffectName17);
             this.groupBox1.Controls.Add(this.playEffect17);
             this.groupBox1.Controls.Add(this.ResetEffect16);
+            this.groupBox1.Controls.Add(this.EffectName18);
             this.groupBox1.Controls.Add(this.ResetEffect17);
+            this.groupBox1.Controls.Add(this.EffectName19);
             this.groupBox1.Controls.Add(this.playEffect16);
             this.groupBox1.Controls.Add(this.ResetEffect18);
+            this.groupBox1.Controls.Add(this.EffectName20);
             this.groupBox1.Controls.Add(this.ResetEffect20);
             this.groupBox1.Controls.Add(this.playEffect15);
+            this.groupBox1.Controls.Add(this.EffectName11);
             this.groupBox1.Controls.Add(this.progressBarEffect16);
             this.groupBox1.Controls.Add(this.playEffect14);
             this.groupBox1.Controls.Add(this.progressBarEffect20);
@@ -397,6 +449,194 @@ namespace Mp3Player
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Effects";
             // 
+            // WhileEffect2
+            // 
+            this.WhileEffect2.AutoSize = true;
+            this.WhileEffect2.Location = new System.Drawing.Point(50, 38);
+            this.WhileEffect2.Name = "WhileEffect2";
+            this.WhileEffect2.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect2.TabIndex = 171;
+            this.WhileEffect2.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect3
+            // 
+            this.WhileEffect3.AutoSize = true;
+            this.WhileEffect3.Location = new System.Drawing.Point(50, 62);
+            this.WhileEffect3.Name = "WhileEffect3";
+            this.WhileEffect3.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect3.TabIndex = 170;
+            this.WhileEffect3.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect4
+            // 
+            this.WhileEffect4.AutoSize = true;
+            this.WhileEffect4.Location = new System.Drawing.Point(50, 84);
+            this.WhileEffect4.Name = "WhileEffect4";
+            this.WhileEffect4.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect4.TabIndex = 169;
+            this.WhileEffect4.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect5
+            // 
+            this.WhileEffect5.AutoSize = true;
+            this.WhileEffect5.Location = new System.Drawing.Point(50, 106);
+            this.WhileEffect5.Name = "WhileEffect5";
+            this.WhileEffect5.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect5.TabIndex = 168;
+            this.WhileEffect5.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect6
+            // 
+            this.WhileEffect6.AutoSize = true;
+            this.WhileEffect6.Location = new System.Drawing.Point(50, 128);
+            this.WhileEffect6.Name = "WhileEffect6";
+            this.WhileEffect6.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect6.TabIndex = 167;
+            this.WhileEffect6.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect7
+            // 
+            this.WhileEffect7.AutoSize = true;
+            this.WhileEffect7.Location = new System.Drawing.Point(50, 148);
+            this.WhileEffect7.Name = "WhileEffect7";
+            this.WhileEffect7.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect7.TabIndex = 166;
+            this.WhileEffect7.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect8
+            // 
+            this.WhileEffect8.AutoSize = true;
+            this.WhileEffect8.Location = new System.Drawing.Point(50, 172);
+            this.WhileEffect8.Name = "WhileEffect8";
+            this.WhileEffect8.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect8.TabIndex = 165;
+            this.WhileEffect8.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect9
+            // 
+            this.WhileEffect9.AutoSize = true;
+            this.WhileEffect9.Location = new System.Drawing.Point(50, 194);
+            this.WhileEffect9.Name = "WhileEffect9";
+            this.WhileEffect9.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect9.TabIndex = 164;
+            this.WhileEffect9.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect10
+            // 
+            this.WhileEffect10.AutoSize = true;
+            this.WhileEffect10.Location = new System.Drawing.Point(50, 216);
+            this.WhileEffect10.Name = "WhileEffect10";
+            this.WhileEffect10.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect10.TabIndex = 163;
+            this.WhileEffect10.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect11
+            // 
+            this.WhileEffect11.AutoSize = true;
+            this.WhileEffect11.Location = new System.Drawing.Point(50, 237);
+            this.WhileEffect11.Name = "WhileEffect11";
+            this.WhileEffect11.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect11.TabIndex = 162;
+            this.WhileEffect11.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect12
+            // 
+            this.WhileEffect12.AutoSize = true;
+            this.WhileEffect12.Location = new System.Drawing.Point(50, 259);
+            this.WhileEffect12.Name = "WhileEffect12";
+            this.WhileEffect12.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect12.TabIndex = 161;
+            this.WhileEffect12.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect13
+            // 
+            this.WhileEffect13.AutoSize = true;
+            this.WhileEffect13.Location = new System.Drawing.Point(50, 281);
+            this.WhileEffect13.Name = "WhileEffect13";
+            this.WhileEffect13.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect13.TabIndex = 160;
+            this.WhileEffect13.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect14
+            // 
+            this.WhileEffect14.AutoSize = true;
+            this.WhileEffect14.Location = new System.Drawing.Point(50, 303);
+            this.WhileEffect14.Name = "WhileEffect14";
+            this.WhileEffect14.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect14.TabIndex = 159;
+            this.WhileEffect14.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect15
+            // 
+            this.WhileEffect15.AutoSize = true;
+            this.WhileEffect15.Location = new System.Drawing.Point(50, 325);
+            this.WhileEffect15.Name = "WhileEffect15";
+            this.WhileEffect15.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect15.TabIndex = 158;
+            this.WhileEffect15.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect16
+            // 
+            this.WhileEffect16.AutoSize = true;
+            this.WhileEffect16.Location = new System.Drawing.Point(50, 347);
+            this.WhileEffect16.Name = "WhileEffect16";
+            this.WhileEffect16.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect16.TabIndex = 157;
+            this.WhileEffect16.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect17
+            // 
+            this.WhileEffect17.AutoSize = true;
+            this.WhileEffect17.Location = new System.Drawing.Point(50, 369);
+            this.WhileEffect17.Name = "WhileEffect17";
+            this.WhileEffect17.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect17.TabIndex = 156;
+            this.WhileEffect17.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect18
+            // 
+            this.WhileEffect18.AutoSize = true;
+            this.WhileEffect18.Location = new System.Drawing.Point(50, 392);
+            this.WhileEffect18.Name = "WhileEffect18";
+            this.WhileEffect18.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect18.TabIndex = 155;
+            this.WhileEffect18.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect19
+            // 
+            this.WhileEffect19.AutoSize = true;
+            this.WhileEffect19.Location = new System.Drawing.Point(50, 414);
+            this.WhileEffect19.Name = "WhileEffect19";
+            this.WhileEffect19.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect19.TabIndex = 154;
+            this.WhileEffect19.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect20
+            // 
+            this.WhileEffect20.AutoSize = true;
+            this.WhileEffect20.Location = new System.Drawing.Point(50, 436);
+            this.WhileEffect20.Name = "WhileEffect20";
+            this.WhileEffect20.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect20.TabIndex = 153;
+            this.WhileEffect20.UseVisualStyleBackColor = true;
+            // 
+            // WhileEffect
+            // 
+            this.WhileEffect.AutoSize = true;
+            this.WhileEffect.Location = new System.Drawing.Point(50, 18);
+            this.WhileEffect.Name = "WhileEffect";
+            this.WhileEffect.Size = new System.Drawing.Size(15, 14);
+            this.WhileEffect.TabIndex = 59;
+            this.WhileEffect.UseVisualStyleBackColor = true;
+            // 
+            // EffectName12
+            // 
+            this.EffectName12.Location = new System.Drawing.Point(69, 256);
+            this.EffectName12.Name = "EffectName12";
+            this.EffectName12.ReadOnly = true;
+            this.EffectName12.Size = new System.Drawing.Size(394, 20);
+            this.EffectName12.TabIndex = 110;
+            // 
             // playEffect20
             // 
             this.playEffect20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("playEffect20.BackgroundImage")));
@@ -418,6 +658,14 @@ namespace Mp3Player
             this.ResetEffect19.TabIndex = 142;
             this.ResetEffect19.UseVisualStyleBackColor = true;
             this.ResetEffect19.Click += new System.EventHandler(this.ResetEffect19_Click);
+            // 
+            // EffectName13
+            // 
+            this.EffectName13.Location = new System.Drawing.Point(69, 278);
+            this.EffectName13.Name = "EffectName13";
+            this.EffectName13.ReadOnly = true;
+            this.EffectName13.Size = new System.Drawing.Size(394, 20);
+            this.EffectName13.TabIndex = 109;
             // 
             // ResetEffect13
             // 
@@ -441,6 +689,14 @@ namespace Mp3Player
             this.playEffect19.UseVisualStyleBackColor = true;
             this.playEffect19.Click += new System.EventHandler(this.playEffect19_Click);
             // 
+            // EffectName14
+            // 
+            this.EffectName14.Location = new System.Drawing.Point(69, 300);
+            this.EffectName14.Name = "EffectName14";
+            this.EffectName14.ReadOnly = true;
+            this.EffectName14.Size = new System.Drawing.Size(394, 20);
+            this.EffectName14.TabIndex = 108;
+            // 
             // ResetEffect11
             // 
             this.ResetEffect11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ResetEffect11.BackgroundImage")));
@@ -463,6 +719,14 @@ namespace Mp3Player
             this.ResetEffect12.UseVisualStyleBackColor = true;
             this.ResetEffect12.Click += new System.EventHandler(this.ResetEffect12_Click);
             // 
+            // EffectName15
+            // 
+            this.EffectName15.Location = new System.Drawing.Point(69, 322);
+            this.EffectName15.Name = "EffectName15";
+            this.EffectName15.ReadOnly = true;
+            this.EffectName15.Size = new System.Drawing.Size(394, 20);
+            this.EffectName15.TabIndex = 107;
+            // 
             // playEffect18
             // 
             this.playEffect18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("playEffect18.BackgroundImage")));
@@ -473,6 +737,14 @@ namespace Mp3Player
             this.playEffect18.TabIndex = 150;
             this.playEffect18.UseVisualStyleBackColor = true;
             this.playEffect18.Click += new System.EventHandler(this.playEffect18_Click);
+            // 
+            // EffectName16
+            // 
+            this.EffectName16.Location = new System.Drawing.Point(69, 344);
+            this.EffectName16.Name = "EffectName16";
+            this.EffectName16.ReadOnly = true;
+            this.EffectName16.Size = new System.Drawing.Size(394, 20);
+            this.EffectName16.TabIndex = 106;
             // 
             // ResetEffect14
             // 
@@ -496,6 +768,14 @@ namespace Mp3Player
             this.ResetEffect15.UseVisualStyleBackColor = true;
             this.ResetEffect15.Click += new System.EventHandler(this.ResetEffect15_Click);
             // 
+            // EffectName17
+            // 
+            this.EffectName17.Location = new System.Drawing.Point(69, 366);
+            this.EffectName17.Name = "EffectName17";
+            this.EffectName17.ReadOnly = true;
+            this.EffectName17.Size = new System.Drawing.Size(394, 20);
+            this.EffectName17.TabIndex = 105;
+            // 
             // playEffect17
             // 
             this.playEffect17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("playEffect17.BackgroundImage")));
@@ -518,6 +798,14 @@ namespace Mp3Player
             this.ResetEffect16.UseVisualStyleBackColor = true;
             this.ResetEffect16.Click += new System.EventHandler(this.ResetEffect16_Click);
             // 
+            // EffectName18
+            // 
+            this.EffectName18.Location = new System.Drawing.Point(69, 388);
+            this.EffectName18.Name = "EffectName18";
+            this.EffectName18.ReadOnly = true;
+            this.EffectName18.Size = new System.Drawing.Size(394, 20);
+            this.EffectName18.TabIndex = 104;
+            // 
             // ResetEffect17
             // 
             this.ResetEffect17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ResetEffect17.BackgroundImage")));
@@ -528,6 +816,14 @@ namespace Mp3Player
             this.ResetEffect17.TabIndex = 135;
             this.ResetEffect17.UseVisualStyleBackColor = true;
             this.ResetEffect17.Click += new System.EventHandler(this.ResetEffect17_Click);
+            // 
+            // EffectName19
+            // 
+            this.EffectName19.Location = new System.Drawing.Point(69, 411);
+            this.EffectName19.Name = "EffectName19";
+            this.EffectName19.ReadOnly = true;
+            this.EffectName19.Size = new System.Drawing.Size(394, 20);
+            this.EffectName19.TabIndex = 103;
             // 
             // playEffect16
             // 
@@ -551,6 +847,14 @@ namespace Mp3Player
             this.ResetEffect18.UseVisualStyleBackColor = true;
             this.ResetEffect18.Click += new System.EventHandler(this.ResetEffect18_Click);
             // 
+            // EffectName20
+            // 
+            this.EffectName20.Location = new System.Drawing.Point(69, 433);
+            this.EffectName20.Name = "EffectName20";
+            this.EffectName20.ReadOnly = true;
+            this.EffectName20.Size = new System.Drawing.Size(394, 20);
+            this.EffectName20.TabIndex = 102;
+            // 
             // ResetEffect20
             // 
             this.ResetEffect20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ResetEffect20.BackgroundImage")));
@@ -573,12 +877,20 @@ namespace Mp3Player
             this.playEffect15.UseVisualStyleBackColor = true;
             this.playEffect15.Click += new System.EventHandler(this.playEffect15_Click);
             // 
+            // EffectName11
+            // 
+            this.EffectName11.Location = new System.Drawing.Point(69, 234);
+            this.EffectName11.Name = "EffectName11";
+            this.EffectName11.ReadOnly = true;
+            this.EffectName11.Size = new System.Drawing.Size(394, 20);
+            this.EffectName11.TabIndex = 98;
+            // 
             // progressBarEffect16
             // 
-            this.progressBarEffect16.Location = new System.Drawing.Point(46, 344);
+            this.progressBarEffect16.Location = new System.Drawing.Point(465, 344);
             this.progressBarEffect16.MarqueeAnimationSpeed = 1;
             this.progressBarEffect16.Name = "progressBarEffect16";
-            this.progressBarEffect16.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect16.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect16.Step = 1;
             this.progressBarEffect16.TabIndex = 123;
             this.progressBarEffect16.Click += new System.EventHandler(this.progressBarEffect16_Click);
@@ -597,10 +909,10 @@ namespace Mp3Player
             // progressBarEffect20
             // 
             this.progressBarEffect20.BackColor = System.Drawing.Color.White;
-            this.progressBarEffect20.Location = new System.Drawing.Point(46, 432);
+            this.progressBarEffect20.Location = new System.Drawing.Point(465, 433);
             this.progressBarEffect20.MarqueeAnimationSpeed = 1;
             this.progressBarEffect20.Name = "progressBarEffect20";
-            this.progressBarEffect20.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect20.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect20.Step = 1;
             this.progressBarEffect20.TabIndex = 131;
             this.progressBarEffect20.Click += new System.EventHandler(this.progressBarEffect20_Click);
@@ -653,10 +965,10 @@ namespace Mp3Player
             // 
             // progressBarEffect19
             // 
-            this.progressBarEffect19.Location = new System.Drawing.Point(46, 410);
+            this.progressBarEffect19.Location = new System.Drawing.Point(465, 411);
             this.progressBarEffect19.MarqueeAnimationSpeed = 1;
             this.progressBarEffect19.Name = "progressBarEffect19";
-            this.progressBarEffect19.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect19.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect19.Step = 1;
             this.progressBarEffect19.TabIndex = 129;
             this.progressBarEffect19.Click += new System.EventHandler(this.progressBarEffect19_Click);
@@ -698,20 +1010,20 @@ namespace Mp3Player
             // 
             // progressBarEffect12
             // 
-            this.progressBarEffect12.Location = new System.Drawing.Point(46, 256);
+            this.progressBarEffect12.Location = new System.Drawing.Point(465, 256);
             this.progressBarEffect12.MarqueeAnimationSpeed = 1;
             this.progressBarEffect12.Name = "progressBarEffect12";
-            this.progressBarEffect12.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect12.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect12.Step = 1;
             this.progressBarEffect12.TabIndex = 115;
             this.progressBarEffect12.Click += new System.EventHandler(this.progressBarEffect12_Click);
             // 
             // progressBarEffect18
             // 
-            this.progressBarEffect18.Location = new System.Drawing.Point(46, 388);
+            this.progressBarEffect18.Location = new System.Drawing.Point(465, 388);
             this.progressBarEffect18.MarqueeAnimationSpeed = 1;
             this.progressBarEffect18.Name = "progressBarEffect18";
-            this.progressBarEffect18.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect18.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect18.Step = 1;
             this.progressBarEffect18.TabIndex = 127;
             this.progressBarEffect18.Click += new System.EventHandler(this.progressBarEffect18_Click);
@@ -742,20 +1054,20 @@ namespace Mp3Player
             // 
             // progressBarEffect13
             // 
-            this.progressBarEffect13.Location = new System.Drawing.Point(46, 278);
+            this.progressBarEffect13.Location = new System.Drawing.Point(465, 278);
             this.progressBarEffect13.MarqueeAnimationSpeed = 1;
             this.progressBarEffect13.Name = "progressBarEffect13";
-            this.progressBarEffect13.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect13.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect13.Step = 1;
             this.progressBarEffect13.TabIndex = 117;
             this.progressBarEffect13.Click += new System.EventHandler(this.progressBarEffect13_Click);
             // 
             // progressBarEffect17
             // 
-            this.progressBarEffect17.Location = new System.Drawing.Point(46, 366);
+            this.progressBarEffect17.Location = new System.Drawing.Point(465, 366);
             this.progressBarEffect17.MarqueeAnimationSpeed = 1;
             this.progressBarEffect17.Name = "progressBarEffect17";
-            this.progressBarEffect17.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect17.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect17.Step = 1;
             this.progressBarEffect17.TabIndex = 125;
             this.progressBarEffect17.Click += new System.EventHandler(this.progressBarEffect17_Click);
@@ -786,10 +1098,10 @@ namespace Mp3Player
             // 
             // progressBarEffect14
             // 
-            this.progressBarEffect14.Location = new System.Drawing.Point(46, 300);
+            this.progressBarEffect14.Location = new System.Drawing.Point(465, 300);
             this.progressBarEffect14.MarqueeAnimationSpeed = 1;
             this.progressBarEffect14.Name = "progressBarEffect14";
-            this.progressBarEffect14.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect14.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect14.Step = 1;
             this.progressBarEffect14.TabIndex = 119;
             this.progressBarEffect14.Click += new System.EventHandler(this.progressBarEffect14_Click);
@@ -820,27 +1132,27 @@ namespace Mp3Player
             // 
             // progressBarEffect11
             // 
-            this.progressBarEffect11.Location = new System.Drawing.Point(46, 234);
+            this.progressBarEffect11.Location = new System.Drawing.Point(465, 234);
             this.progressBarEffect11.MarqueeAnimationSpeed = 1;
             this.progressBarEffect11.Name = "progressBarEffect11";
-            this.progressBarEffect11.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect11.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect11.Step = 1;
             this.progressBarEffect11.TabIndex = 113;
             this.progressBarEffect11.Click += new System.EventHandler(this.progressBarEffect11_Click);
             // 
             // progressBarEffect15
             // 
-            this.progressBarEffect15.Location = new System.Drawing.Point(46, 322);
+            this.progressBarEffect15.Location = new System.Drawing.Point(465, 322);
             this.progressBarEffect15.MarqueeAnimationSpeed = 1;
             this.progressBarEffect15.Name = "progressBarEffect15";
-            this.progressBarEffect15.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect15.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect15.Step = 1;
             this.progressBarEffect15.TabIndex = 121;
             this.progressBarEffect15.Click += new System.EventHandler(this.progressBarEffect15_Click);
             // 
             // EffectName2
             // 
-            this.EffectName2.Location = new System.Drawing.Point(400, 37);
+            this.EffectName2.Location = new System.Drawing.Point(69, 37);
             this.EffectName2.Name = "EffectName2";
             this.EffectName2.ReadOnly = true;
             this.EffectName2.Size = new System.Drawing.Size(394, 20);
@@ -848,7 +1160,7 @@ namespace Mp3Player
             // 
             // EffectName3
             // 
-            this.EffectName3.Location = new System.Drawing.Point(400, 59);
+            this.EffectName3.Location = new System.Drawing.Point(69, 59);
             this.EffectName3.Name = "EffectName3";
             this.EffectName3.ReadOnly = true;
             this.EffectName3.Size = new System.Drawing.Size(394, 20);
@@ -856,7 +1168,7 @@ namespace Mp3Player
             // 
             // EffectName4
             // 
-            this.EffectName4.Location = new System.Drawing.Point(400, 81);
+            this.EffectName4.Location = new System.Drawing.Point(69, 81);
             this.EffectName4.Name = "EffectName4";
             this.EffectName4.ReadOnly = true;
             this.EffectName4.Size = new System.Drawing.Size(394, 20);
@@ -864,7 +1176,7 @@ namespace Mp3Player
             // 
             // EffectName5
             // 
-            this.EffectName5.Location = new System.Drawing.Point(400, 103);
+            this.EffectName5.Location = new System.Drawing.Point(69, 103);
             this.EffectName5.Name = "EffectName5";
             this.EffectName5.ReadOnly = true;
             this.EffectName5.Size = new System.Drawing.Size(394, 20);
@@ -872,7 +1184,7 @@ namespace Mp3Player
             // 
             // EffectName6
             // 
-            this.EffectName6.Location = new System.Drawing.Point(400, 125);
+            this.EffectName6.Location = new System.Drawing.Point(69, 125);
             this.EffectName6.Name = "EffectName6";
             this.EffectName6.ReadOnly = true;
             this.EffectName6.Size = new System.Drawing.Size(394, 20);
@@ -880,7 +1192,7 @@ namespace Mp3Player
             // 
             // EffectName7
             // 
-            this.EffectName7.Location = new System.Drawing.Point(400, 147);
+            this.EffectName7.Location = new System.Drawing.Point(69, 147);
             this.EffectName7.Name = "EffectName7";
             this.EffectName7.ReadOnly = true;
             this.EffectName7.Size = new System.Drawing.Size(394, 20);
@@ -888,7 +1200,7 @@ namespace Mp3Player
             // 
             // EffectName8
             // 
-            this.EffectName8.Location = new System.Drawing.Point(400, 169);
+            this.EffectName8.Location = new System.Drawing.Point(69, 169);
             this.EffectName8.Name = "EffectName8";
             this.EffectName8.ReadOnly = true;
             this.EffectName8.Size = new System.Drawing.Size(394, 20);
@@ -896,7 +1208,7 @@ namespace Mp3Player
             // 
             // EffectName9
             // 
-            this.EffectName9.Location = new System.Drawing.Point(400, 191);
+            this.EffectName9.Location = new System.Drawing.Point(69, 191);
             this.EffectName9.Name = "EffectName9";
             this.EffectName9.ReadOnly = true;
             this.EffectName9.Size = new System.Drawing.Size(394, 20);
@@ -904,7 +1216,7 @@ namespace Mp3Player
             // 
             // EffectName10
             // 
-            this.EffectName10.Location = new System.Drawing.Point(400, 213);
+            this.EffectName10.Location = new System.Drawing.Point(69, 213);
             this.EffectName10.Name = "EffectName10";
             this.EffectName10.ReadOnly = true;
             this.EffectName10.Size = new System.Drawing.Size(394, 20);
@@ -912,7 +1224,7 @@ namespace Mp3Player
             // 
             // EffectName
             // 
-            this.EffectName.Location = new System.Drawing.Point(400, 15);
+            this.EffectName.Location = new System.Drawing.Point(69, 15);
             this.EffectName.Name = "EffectName";
             this.EffectName.ReadOnly = true;
             this.EffectName.Size = new System.Drawing.Size(394, 20);
@@ -1030,10 +1342,10 @@ namespace Mp3Player
             // 
             // progressBarEffect6
             // 
-            this.progressBarEffect6.Location = new System.Drawing.Point(46, 124);
+            this.progressBarEffect6.Location = new System.Drawing.Point(465, 125);
             this.progressBarEffect6.MarqueeAnimationSpeed = 1;
             this.progressBarEffect6.Name = "progressBarEffect6";
-            this.progressBarEffect6.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect6.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect6.Step = 1;
             this.progressBarEffect6.TabIndex = 27;
             this.progressBarEffect6.Click += new System.EventHandler(this.progressBarEffect6_Click);
@@ -1041,10 +1353,10 @@ namespace Mp3Player
             // progressBarEffect10
             // 
             this.progressBarEffect10.BackColor = System.Drawing.Color.White;
-            this.progressBarEffect10.Location = new System.Drawing.Point(46, 212);
+            this.progressBarEffect10.Location = new System.Drawing.Point(465, 213);
             this.progressBarEffect10.MarqueeAnimationSpeed = 1;
             this.progressBarEffect10.Name = "progressBarEffect10";
-            this.progressBarEffect10.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect10.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect10.Step = 1;
             this.progressBarEffect10.TabIndex = 43;
             this.progressBarEffect10.Click += new System.EventHandler(this.progressBarEffect10_Click);
@@ -1074,10 +1386,10 @@ namespace Mp3Player
             // 
             // progressBarEffect9
             // 
-            this.progressBarEffect9.Location = new System.Drawing.Point(46, 190);
+            this.progressBarEffect9.Location = new System.Drawing.Point(465, 191);
             this.progressBarEffect9.MarqueeAnimationSpeed = 1;
             this.progressBarEffect9.Name = "progressBarEffect9";
-            this.progressBarEffect9.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect9.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect9.Step = 1;
             this.progressBarEffect9.TabIndex = 39;
             this.progressBarEffect9.Click += new System.EventHandler(this.progressBarEffect9_Click);
@@ -1107,10 +1419,10 @@ namespace Mp3Player
             // 
             // progressBarEffect8
             // 
-            this.progressBarEffect8.Location = new System.Drawing.Point(46, 168);
+            this.progressBarEffect8.Location = new System.Drawing.Point(465, 169);
             this.progressBarEffect8.MarqueeAnimationSpeed = 1;
             this.progressBarEffect8.Name = "progressBarEffect8";
-            this.progressBarEffect8.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect8.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect8.Step = 1;
             this.progressBarEffect8.TabIndex = 33;
             this.progressBarEffect8.Click += new System.EventHandler(this.progressBarEffect8_Click);
@@ -1140,10 +1452,10 @@ namespace Mp3Player
             // 
             // progressBarEffect7
             // 
-            this.progressBarEffect7.Location = new System.Drawing.Point(46, 146);
+            this.progressBarEffect7.Location = new System.Drawing.Point(465, 147);
             this.progressBarEffect7.MarqueeAnimationSpeed = 1;
             this.progressBarEffect7.Name = "progressBarEffect7";
-            this.progressBarEffect7.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect7.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect7.Step = 1;
             this.progressBarEffect7.TabIndex = 30;
             this.progressBarEffect7.Click += new System.EventHandler(this.progressBarEffect7_Click);
@@ -1196,20 +1508,20 @@ namespace Mp3Player
             // 
             // progressBarEffect
             // 
-            this.progressBarEffect.Location = new System.Drawing.Point(46, 14);
+            this.progressBarEffect.Location = new System.Drawing.Point(465, 15);
             this.progressBarEffect.MarqueeAnimationSpeed = 1;
             this.progressBarEffect.Name = "progressBarEffect";
-            this.progressBarEffect.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect.Step = 1;
             this.progressBarEffect.TabIndex = 8;
             this.progressBarEffect.Click += new System.EventHandler(this.progressBarEffect_Click);
             // 
             // progressBarEffect5
             // 
-            this.progressBarEffect5.Location = new System.Drawing.Point(46, 102);
+            this.progressBarEffect5.Location = new System.Drawing.Point(465, 103);
             this.progressBarEffect5.MarqueeAnimationSpeed = 1;
             this.progressBarEffect5.Name = "progressBarEffect5";
-            this.progressBarEffect5.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect5.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect5.Step = 1;
             this.progressBarEffect5.TabIndex = 23;
             this.progressBarEffect5.Click += new System.EventHandler(this.progressBarEffect5_Click);
@@ -1239,10 +1551,10 @@ namespace Mp3Player
             // 
             // progressBarEffect4
             // 
-            this.progressBarEffect4.Location = new System.Drawing.Point(46, 80);
+            this.progressBarEffect4.Location = new System.Drawing.Point(465, 81);
             this.progressBarEffect4.MarqueeAnimationSpeed = 1;
             this.progressBarEffect4.Name = "progressBarEffect4";
-            this.progressBarEffect4.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect4.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect4.Step = 1;
             this.progressBarEffect4.TabIndex = 19;
             this.progressBarEffect4.Click += new System.EventHandler(this.progressBarEffect4_Click);
@@ -1272,10 +1584,10 @@ namespace Mp3Player
             // 
             // progressBarEffect3
             // 
-            this.progressBarEffect3.Location = new System.Drawing.Point(46, 58);
+            this.progressBarEffect3.Location = new System.Drawing.Point(465, 59);
             this.progressBarEffect3.MarqueeAnimationSpeed = 1;
             this.progressBarEffect3.Name = "progressBarEffect3";
-            this.progressBarEffect3.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect3.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect3.Step = 1;
             this.progressBarEffect3.TabIndex = 13;
             this.progressBarEffect3.Click += new System.EventHandler(this.progressBarEffect3_Click);
@@ -1305,10 +1617,10 @@ namespace Mp3Player
             // 
             // progressBarEffect2
             // 
-            this.progressBarEffect2.Location = new System.Drawing.Point(46, 36);
+            this.progressBarEffect2.Location = new System.Drawing.Point(465, 37);
             this.progressBarEffect2.MarqueeAnimationSpeed = 1;
             this.progressBarEffect2.Name = "progressBarEffect2";
-            this.progressBarEffect2.Size = new System.Drawing.Size(352, 21);
+            this.progressBarEffect2.Size = new System.Drawing.Size(328, 20);
             this.progressBarEffect2.Step = 1;
             this.progressBarEffect2.TabIndex = 10;
             this.progressBarEffect2.Click += new System.EventHandler(this.progressBarEffect2_Click);
@@ -1489,109 +1801,43 @@ namespace Mp3Player
             this.WhileSecond.TabIndex = 58;
             this.WhileSecond.UseVisualStyleBackColor = true;
             // 
-            // EffectName12
+            // AllStopButton
             // 
-            this.EffectName12.Location = new System.Drawing.Point(404, 355);
-            this.EffectName12.Name = "EffectName12";
-            this.EffectName12.ReadOnly = true;
-            this.EffectName12.Size = new System.Drawing.Size(394, 20);
-            this.EffectName12.TabIndex = 110;
+            this.AllStopButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AllStopButton.BackgroundImage")));
+            this.AllStopButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.AllStopButton.Location = new System.Drawing.Point(205, 557);
+            this.AllStopButton.Name = "AllStopButton";
+            this.AllStopButton.Size = new System.Drawing.Size(23, 23);
+            this.AllStopButton.TabIndex = 172;
+            this.AllStopButton.UseVisualStyleBackColor = true;
+            this.AllStopButton.Click += new System.EventHandler(this.AllStopButton_Click);
             // 
-            // EffectName13
+            // AllResetButton
             // 
-            this.EffectName13.Location = new System.Drawing.Point(404, 377);
-            this.EffectName13.Name = "EffectName13";
-            this.EffectName13.ReadOnly = true;
-            this.EffectName13.Size = new System.Drawing.Size(394, 20);
-            this.EffectName13.TabIndex = 109;
-            // 
-            // EffectName14
-            // 
-            this.EffectName14.Location = new System.Drawing.Point(404, 399);
-            this.EffectName14.Name = "EffectName14";
-            this.EffectName14.ReadOnly = true;
-            this.EffectName14.Size = new System.Drawing.Size(394, 20);
-            this.EffectName14.TabIndex = 108;
-            // 
-            // EffectName15
-            // 
-            this.EffectName15.Location = new System.Drawing.Point(404, 421);
-            this.EffectName15.Name = "EffectName15";
-            this.EffectName15.ReadOnly = true;
-            this.EffectName15.Size = new System.Drawing.Size(394, 20);
-            this.EffectName15.TabIndex = 107;
-            // 
-            // EffectName16
-            // 
-            this.EffectName16.Location = new System.Drawing.Point(404, 443);
-            this.EffectName16.Name = "EffectName16";
-            this.EffectName16.ReadOnly = true;
-            this.EffectName16.Size = new System.Drawing.Size(394, 20);
-            this.EffectName16.TabIndex = 106;
-            // 
-            // EffectName17
-            // 
-            this.EffectName17.Location = new System.Drawing.Point(404, 465);
-            this.EffectName17.Name = "EffectName17";
-            this.EffectName17.ReadOnly = true;
-            this.EffectName17.Size = new System.Drawing.Size(394, 20);
-            this.EffectName17.TabIndex = 105;
-            // 
-            // EffectName18
-            // 
-            this.EffectName18.Location = new System.Drawing.Point(404, 487);
-            this.EffectName18.Name = "EffectName18";
-            this.EffectName18.ReadOnly = true;
-            this.EffectName18.Size = new System.Drawing.Size(394, 20);
-            this.EffectName18.TabIndex = 104;
-            // 
-            // EffectName19
-            // 
-            this.EffectName19.Location = new System.Drawing.Point(404, 509);
-            this.EffectName19.Name = "EffectName19";
-            this.EffectName19.ReadOnly = true;
-            this.EffectName19.Size = new System.Drawing.Size(394, 20);
-            this.EffectName19.TabIndex = 103;
-            // 
-            // EffectName20
-            // 
-            this.EffectName20.Location = new System.Drawing.Point(404, 531);
-            this.EffectName20.Name = "EffectName20";
-            this.EffectName20.ReadOnly = true;
-            this.EffectName20.Size = new System.Drawing.Size(394, 20);
-            this.EffectName20.TabIndex = 102;
-            // 
-            // EffectName11
-            // 
-            this.EffectName11.Location = new System.Drawing.Point(404, 333);
-            this.EffectName11.Name = "EffectName11";
-            this.EffectName11.ReadOnly = true;
-            this.EffectName11.Size = new System.Drawing.Size(394, 20);
-            this.EffectName11.TabIndex = 98;
+            this.AllResetButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AllResetButton.BackgroundImage")));
+            this.AllResetButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.AllResetButton.Location = new System.Drawing.Point(229, 557);
+            this.AllResetButton.Name = "AllResetButton";
+            this.AllResetButton.Size = new System.Drawing.Size(23, 23);
+            this.AllResetButton.TabIndex = 173;
+            this.AllResetButton.UseVisualStyleBackColor = true;
+            this.AllResetButton.Click += new System.EventHandler(this.AllResetButton_Click);
             // 
             // DJ_SHARP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 584);
-            this.Controls.Add(this.EffectName12);
+            this.Controls.Add(this.AllStopButton);
+            this.Controls.Add(this.AllResetButton);
             this.Controls.Add(this.WhileSecond);
-            this.Controls.Add(this.EffectName13);
             this.Controls.Add(this.WhileMain);
-            this.Controls.Add(this.EffectName14);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.EffectName15);
-            this.Controls.Add(this.EffectName16);
             this.Controls.Add(this.ResetSecondMusic);
-            this.Controls.Add(this.EffectName17);
             this.Controls.Add(this.resetMainMusic);
-            this.Controls.Add(this.EffectName18);
             this.Controls.Add(this.VolumeEffects);
-            this.Controls.Add(this.EffectName19);
             this.Controls.Add(this.VolumeMain);
-            this.Controls.Add(this.EffectName20);
             this.Controls.Add(this.progressBarMainMusicSecond);
-            this.Controls.Add(this.EffectName11);
             this.Controls.Add(this.OpenMainMusicSecond);
             this.Controls.Add(this.MainMusicSecond);
             this.Controls.Add(this.PauseButtonSecond);
@@ -1622,7 +1868,6 @@ namespace Mp3Player
         #endregion
 
         private System.Windows.Forms.Button PlayButton;
-        private System.Windows.Forms.Button PauseButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
@@ -1746,6 +1991,29 @@ namespace Mp3Player
         public System.Windows.Forms.TrackBar VolumeEffects;
         public System.Windows.Forms.ProgressBar progressBarEffect;
         private System.Windows.Forms.Button MinimizeWindow;
+        private System.Windows.Forms.Button PauseButton;
+        private System.Windows.Forms.CheckBox WhileEffect2;
+        private System.Windows.Forms.CheckBox WhileEffect3;
+        private System.Windows.Forms.CheckBox WhileEffect4;
+        private System.Windows.Forms.CheckBox WhileEffect5;
+        private System.Windows.Forms.CheckBox WhileEffect6;
+        private System.Windows.Forms.CheckBox WhileEffect7;
+        private System.Windows.Forms.CheckBox WhileEffect8;
+        private System.Windows.Forms.CheckBox WhileEffect9;
+        private System.Windows.Forms.CheckBox WhileEffect10;
+        private System.Windows.Forms.CheckBox WhileEffect11;
+        private System.Windows.Forms.CheckBox WhileEffect12;
+        private System.Windows.Forms.CheckBox WhileEffect13;
+        private System.Windows.Forms.CheckBox WhileEffect14;
+        private System.Windows.Forms.CheckBox WhileEffect15;
+        private System.Windows.Forms.CheckBox WhileEffect16;
+        private System.Windows.Forms.CheckBox WhileEffect17;
+        private System.Windows.Forms.CheckBox WhileEffect18;
+        private System.Windows.Forms.CheckBox WhileEffect19;
+        private System.Windows.Forms.CheckBox WhileEffect20;
+        private System.Windows.Forms.CheckBox WhileEffect;
+        public System.Windows.Forms.Button AllStopButton;
+        private System.Windows.Forms.Button AllResetButton;
     }
 }
 

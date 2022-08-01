@@ -107,7 +107,7 @@ namespace Mp3Player
         public static extern bool ReleaseCapture();
         #endregion
 
-        public DJ_SHARP() => InitializeComponent();
+        public DJ_SHARP() { InitializeComponent(); }
 
         private void Form1_Load(object sender, EventArgs e) {
             using (RegistryKey regEdit = Registry.CurrentUser.OpenSubKey(@"Software\DJ-Sharp", false)) {
@@ -116,10 +116,12 @@ namespace Mp3Player
                 string REGStandartVolume = regEdit?.GetValue("StandartVolume")?.ToString();
                 string REGCheckedStatus = regEdit?.GetValue("CheckedStatus")?.ToString();
                 string REGSmoothing = regEdit?.GetValue("Smoothing")?.ToString();
+                string REGMultiMusic = regEdit?.GetValue("MultiMusic")?.ToString();
 
                 try {
                     bool CheckStateMany;
                     bool CheckStateSmooth;
+                    bool MultiMusicState;
 
                     delayTransition = Convert.ToInt32(REGdelayTransition);
                     delayUpdateProgress = Convert.ToInt32(REGdelayUpdateProgress);
@@ -138,6 +140,15 @@ namespace Mp3Player
                             break;
                     }
 
+                    switch (REGMultiMusic) {
+                        case "1":
+                            MultiMusicState = true;
+                            break;
+                        default:
+                            MultiMusicState = false;
+                            break;
+                    }
+
                     switch (REGSmoothing) {
                         case "1":
                             CheckStateSmooth = true;
@@ -147,12 +158,108 @@ namespace Mp3Player
                             break;
                     }
 
-                    settingsApp.SetSettings(REGdelayTransition, REGdelayUpdateProgress, REGStandartVolume, CheckStateMany, CheckStateSmooth);
+                    settingsApp.SetSettings(REGdelayTransition, REGdelayUpdateProgress, REGStandartVolume, CheckStateMany, CheckStateSmooth, MultiMusicState);
 
                     VolumeMain.Value = MainVolume;
                     VolumeEffects.Value = MainVolume;
                     timer1.Interval = delayUpdateProgress;
                 } catch { }
+
+                if (regEdit.GetValue("WhileEffect") == null) {
+                    using (RegistryKey regWrite = Registry.CurrentUser.CreateSubKey(@"Software\DJ-Sharp")) {
+                        regWrite.SetValue("WhileMain", 0);
+                        regWrite.SetValue("WhileSecond", 0);
+                        regWrite.SetValue("MainMusic", string.Empty);
+                        regWrite.SetValue("MainMusicSecond", string.Empty);
+                        regWrite.SetValue("WhileEffect", 0);
+                        regWrite.SetValue("WhileEffect2", 0);
+                        regWrite.SetValue("WhileEffect3", 0);
+                        regWrite.SetValue("WhileEffect4", 0);
+                        regWrite.SetValue("WhileEffect5", 0);
+                        regWrite.SetValue("WhileEffect6", 0);
+                        regWrite.SetValue("WhileEffect7", 0);
+                        regWrite.SetValue("WhileEffect8", 0);
+                        regWrite.SetValue("WhileEffect9", 0);
+                        regWrite.SetValue("WhileEffect10", 0);
+                        regWrite.SetValue("WhileEffect11", 0);
+                        regWrite.SetValue("WhileEffect12", 0);
+                        regWrite.SetValue("WhileEffect13", 0);
+                        regWrite.SetValue("WhileEffect14", 0);
+                        regWrite.SetValue("WhileEffect15", 0);
+                        regWrite.SetValue("WhileEffect16", 0);
+                        regWrite.SetValue("WhileEffect17", 0);
+                        regWrite.SetValue("WhileEffect18", 0);
+                        regWrite.SetValue("WhileEffect19", 0);
+                        regWrite.SetValue("WhileEffect20", 0);
+                        regWrite.SetValue("EffectName", string.Empty);
+                        regWrite.SetValue("EffectName2", string.Empty);
+                        regWrite.SetValue("EffectName3", string.Empty);
+                        regWrite.SetValue("EffectName4", string.Empty);
+                        regWrite.SetValue("EffectName5", string.Empty);
+                        regWrite.SetValue("EffectName6", string.Empty);
+                        regWrite.SetValue("EffectName7", string.Empty);
+                        regWrite.SetValue("EffectName8", string.Empty);
+                        regWrite.SetValue("EffectName9", string.Empty);
+                        regWrite.SetValue("EffectName10", string.Empty);
+                        regWrite.SetValue("EffectName11", string.Empty);
+                        regWrite.SetValue("EffectName12", string.Empty);
+                        regWrite.SetValue("EffectName13", string.Empty);
+                        regWrite.SetValue("EffectName14", string.Empty);
+                        regWrite.SetValue("EffectName15", string.Empty);
+                        regWrite.SetValue("EffectName16", string.Empty);
+                        regWrite.SetValue("EffectName17", string.Empty);
+                        regWrite.SetValue("EffectName18", string.Empty);
+                        regWrite.SetValue("EffectName19", string.Empty);
+                        regWrite.SetValue("EffectName20", string.Empty);
+                    }
+                }
+
+                #region REG
+                WhileMain.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileMain"));
+                WhileSecond.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileSecond"));
+                MainMusic.Text = regEdit?.GetValue("MainMusic").ToString();
+                MainMusicSecond.Text = regEdit?.GetValue("MainMusicSecond").ToString();
+                WhileEffect.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect"));
+                WhileEffect2.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect2"));
+                WhileEffect3.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect3"));
+                WhileEffect4.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect4"));
+                WhileEffect5.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect5"));
+                WhileEffect6.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect6"));
+                WhileEffect7.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect7"));
+                WhileEffect8.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect8"));
+                WhileEffect9.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect9"));
+                WhileEffect10.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect10"));
+                WhileEffect11.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect11"));
+                WhileEffect12.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect12"));
+                WhileEffect13.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect13"));
+                WhileEffect14.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect14"));
+                WhileEffect15.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect15"));
+                WhileEffect16.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect16"));
+                WhileEffect17.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect17"));
+                WhileEffect18.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect18"));
+                WhileEffect19.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect19"));
+                WhileEffect20.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect20"));
+                EffectName.Text = regEdit?.GetValue("EffectName").ToString();
+                EffectName2.Text = regEdit?.GetValue("EffectName2").ToString();
+                EffectName3.Text = regEdit?.GetValue("EffectName3").ToString();
+                EffectName4.Text = regEdit?.GetValue("EffectName4").ToString();
+                EffectName5.Text = regEdit?.GetValue("EffectName5").ToString();
+                EffectName6.Text = regEdit?.GetValue("EffectName6").ToString();
+                EffectName7.Text = regEdit?.GetValue("EffectName7").ToString();
+                EffectName8.Text = regEdit?.GetValue("EffectName8").ToString();
+                EffectName9.Text = regEdit?.GetValue("EffectName9").ToString();
+                EffectName10.Text = regEdit?.GetValue("EffectName10").ToString();
+                EffectName11.Text = regEdit?.GetValue("EffectName11").ToString();
+                EffectName12.Text = regEdit?.GetValue("EffectName12").ToString();
+                EffectName13.Text = regEdit?.GetValue("EffectName13").ToString();
+                EffectName14.Text = regEdit?.GetValue("EffectName14").ToString();
+                EffectName15.Text = regEdit?.GetValue("EffectName15").ToString();
+                EffectName16.Text = regEdit?.GetValue("EffectName16").ToString();
+                EffectName17.Text = regEdit?.GetValue("EffectName17").ToString();
+                EffectName18.Text = regEdit?.GetValue("EffectName18").ToString();
+                EffectName19.Text = regEdit?.GetValue("EffectName19").ToString();
+                EffectName20.Text = regEdit?.GetValue("EffectName20").ToString();
+                #endregion
             }
 
             effectsApplication = new TakeMusic(this);
@@ -171,6 +278,7 @@ namespace Mp3Player
         }
         // main
         private void PlayButton_Click(object sender, EventArgs e) {
+            pauseEffects(101);
             if (MainMusic.Text != "") {
                 MainMedia.URL = MainMusic.Text;
 
@@ -178,10 +286,10 @@ namespace Mp3Player
                     MainMedia.controls.currentPosition = time;
                     MainMedia.settings.volume = MainVolume;
 
-                    if (!settingsApp.SmoothStartStopCheck.Checked)
-                        MainMedia.controls.play();
-                    else
+                    if (settingsApp.SmoothStartStopCheck.Checked)
                         MP3Music.smoothStart(MainMedia);
+                    else
+                        MainMedia.controls.play();
 
                     musicIsPlaying = true;
                     MainMusicIsInited = true;
@@ -197,10 +305,10 @@ namespace Mp3Player
         }
 
         private async void PouseButton_Click(object sender, EventArgs e) {
-            if (!settingsApp.SmoothStartStopCheck.Checked)
-                MainMedia.controls.pause();
-            else
+            if (settingsApp.SmoothStartStopCheck.Checked)
                 await MP3Music.smoothStop(MainMedia, PauseButton);
+            else
+                MainMedia.controls.pause();
 
             time = MainMedia.controls.currentPosition;
             musicIsPlaying = false;
@@ -248,6 +356,7 @@ namespace Mp3Player
         }
         // second
         private void PlayButtonSecond_Click(object sender, EventArgs e) {
+            pauseEffects(102);
             if (MainMusicSecond.Text != "") {
                 SecondMedia.URL = MainMusicSecond.Text;
 
@@ -255,10 +364,10 @@ namespace Mp3Player
                     SecondMedia.controls.currentPosition = timeSecond;
                     SecondMedia.settings.volume = MainVolume;
 
-                    if (!settingsApp.SmoothStartStopCheck.Checked)
-                        SecondMedia.controls.play();
-                    else
+                    if (settingsApp.SmoothStartStopCheck.Checked)
                         MP3Music.smoothStart(SecondMedia);
+                    else
+                        SecondMedia.controls.play();
 
                     musicIsPlaying = true;
                     SecondMusicIsInited = true;
@@ -274,10 +383,10 @@ namespace Mp3Player
         }
         
         private async void PauseButtonSecond_Click(object sender, EventArgs e) {
-            if (!settingsApp.SmoothStartStopCheck.Checked)
-                SecondMedia.controls.pause();
-            else
+            if (settingsApp.SmoothStartStopCheck.Checked)
                 await MP3Music.smoothStop(SecondMedia, PauseButtonSecond);
+            else
+                SecondMedia.controls.pause();
 
             timeSecond = SecondMedia.controls.currentPosition;
             musicIsPlaying = false;
@@ -437,7 +546,7 @@ namespace Mp3Player
             if (effectsApplication.BoxLineEffect7.Text != "")
             {
                 pauseEffects(7);
-                MediaEffect7.URL = effectsApplication.BoxLineEffect8.Text;
+                MediaEffect7.URL = effectsApplication.BoxLineEffect7.Text;
                 MediaEffect7.controls.currentPosition = timeEffect7;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
@@ -504,19 +613,19 @@ namespace Mp3Player
             }
         }
 
-        private void playEffect17_Click(object sender, EventArgs e) {
-            if (effectsApplication.BoxLineEffect17.Text != "") {
-                pauseEffects(17);
-                MediaEffect17.URL = effectsApplication.BoxLineEffect17.Text;
-                MediaEffect17.controls.currentPosition = timeEffect17;
+        private void playEffect11_Click(object sender, EventArgs e) {
+            if (effectsApplication.BoxLineEffect11.Text != "") {
+                pauseEffects(11);
+                MediaEffect11.URL = effectsApplication.BoxLineEffect11.Text;
+                MediaEffect11.controls.currentPosition = timeEffect11;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
-                    MediaEffect17.controls.play();
+                    MediaEffect11.controls.play();
                 else
-                    MP3Music.smoothStart(MediaEffect17);
+                    MP3Music.smoothStart(MediaEffect11);
 
-                IsInitedEffect17 = true;
-                MP3Music.ReHideWidgets(pauseEffect17, playEffect17);
+                IsInitedEffect11 = true;
+                MP3Music.ReHideWidgets(pauseEffect11, playEffect11);
             }
         }
 
@@ -600,19 +709,19 @@ namespace Mp3Player
             }
         }
 
-        private void playEffect11_Click(object sender, EventArgs e) {
-            if (effectsApplication.BoxLineEffect11.Text != "") {
-                pauseEffects(11);
-                MediaEffect11.URL = effectsApplication.BoxLineEffect11.Text;
-                MediaEffect11.controls.currentPosition = timeEffect11;
+        private void playEffect17_Click(object sender, EventArgs e) {
+            if (effectsApplication.BoxLineEffect17.Text != "") {
+                pauseEffects(17);
+                MediaEffect17.URL = effectsApplication.BoxLineEffect17.Text;
+                MediaEffect17.controls.currentPosition = timeEffect17;
 
                 if (!settingsApp.SmoothStartStopCheck.Checked)
-                    MediaEffect11.controls.play();
+                    MediaEffect17.controls.play();
                 else
-                    MP3Music.smoothStart(MediaEffect11);
+                    MP3Music.smoothStart(MediaEffect17);
 
-                IsInitedEffect11 = true;
-                MP3Music.ReHideWidgets(pauseEffect11, playEffect11);
+                IsInitedEffect17 = true;
+                MP3Music.ReHideWidgets(pauseEffect17, playEffect17);
             }
         }
 
@@ -774,14 +883,14 @@ namespace Mp3Player
             MP3Music.ReHideWidgets(playEffect10, pauseEffect10);
         }
 
-        private async void pauseEffect17_Click(object sender, EventArgs e) {
+        private async void pauseEffect11_Click(object sender, EventArgs e) {
             if (!settingsApp.SmoothStartStopCheck.Checked)
-                MediaEffect17.controls.pause();
+                MediaEffect11.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect17, pauseEffect17);
+                await MP3Music.smoothStop(MediaEffect11, pauseEffect11);
 
-            timeEffect17 = MediaEffect17.controls.currentPosition;
-            MP3Music.ReHideWidgets(playEffect17, pauseEffect17);
+            timeEffect11 = MediaEffect11.controls.currentPosition;
+            MP3Music.ReHideWidgets(playEffect11, pauseEffect11);
         }
 
         private async void pauseEffect12_Click(object sender, EventArgs e) {
@@ -834,14 +943,14 @@ namespace Mp3Player
             MP3Music.ReHideWidgets(playEffect16, pauseEffect16);
         }
 
-        private async void pauseEffect11_Click(object sender, EventArgs e) {
+        private async void pauseEffect17_Click(object sender, EventArgs e) {
             if (!settingsApp.SmoothStartStopCheck.Checked)
-                MediaEffect11.controls.pause();
+                MediaEffect17.controls.pause();
             else
-                await MP3Music.smoothStop(MediaEffect11, pauseEffect11);
+                await MP3Music.smoothStop(MediaEffect17, pauseEffect17);
 
-            timeEffect11 = MediaEffect11.controls.currentPosition;
-            MP3Music.ReHideWidgets(playEffect11, pauseEffect11);
+            timeEffect17 = MediaEffect17.controls.currentPosition;
+            MP3Music.ReHideWidgets(playEffect17, pauseEffect17);
         }
 
         private async void pauseEffect18_Click(object sender, EventArgs e) {
@@ -876,124 +985,132 @@ namespace Mp3Player
 
         public void pauseEffects(int numberButton)
         {
-            if (!settingsApp.MultiMusicRadio.Checked)
-            {
-                // сделать так чтобы эффекты ставились на паузу, кроме того, что запустили
-                if (!(numberButton == 1))
-                {
+            if (!settingsApp.MultiMusicRadio.Checked || settingsApp.FullMultiMusic.Checked) {
+                if (settingsApp.FullMultiMusic.Checked) {
+                    if (numberButton != 101) {
+                        PouseButton_Click("", new EventArgs());
+                        time = MainMedia.controls.currentPosition;
+                        MP3Music.ReHideWidgets(PlayButton, PauseButton);
+                    }
+                    if (numberButton != 102) {
+                        PauseButtonSecond_Click("", new EventArgs());
+                        timeSecond = SecondMedia.controls.currentPosition;
+                        MP3Music.ReHideWidgets(PlayButtonSecond, PauseButtonSecond);
+                    }
+                }
+                if (numberButton != 1) {
                     MediaEffect.controls.pause();
                     timeEffect = MediaEffect.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect, pauseEffect);
                 }
-                if (!(numberButton == 2))
-                {
+                if (numberButton != 2) {
                     MediaEffect2.controls.pause();
                     timeEffect2 = MediaEffect2.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect2, pauseEffect2);
                 }
-                if (!(numberButton == 3))
+                if (numberButton != 3)
                 {
                     MediaEffect3.controls.pause();
                     timeEffect3 = MediaEffect3.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect3, pauseEffect3);
                 }
-                if (!(numberButton == 4))
+                if (numberButton != 4)
                 {
                     MediaEffect4.controls.pause();
                     timeEffect4 = MediaEffect4.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect4, pauseEffect4);
                 }
-                if (!(numberButton == 5))
+                if (numberButton != 5)
                 {
                     MediaEffect5.controls.pause();
                     timeEffect5 = MediaEffect5.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect5, pauseEffect5);
                 }
-                if (!(numberButton == 6))
+                if (numberButton != 6)
                 {
                     MediaEffect6.controls.pause();
                     timeEffect6 = MediaEffect6.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect6, pauseEffect6);
                 }
-                if (!(numberButton == 7))
+                if (numberButton != 7)
                 {
                     MediaEffect7.controls.pause();
                     timeEffect7 = MediaEffect7.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect7, pauseEffect7);
                 }
-                if (!(numberButton == 8))
+                if (numberButton != 8)
                 {
                     MediaEffect8.controls.pause();
                     timeEffect8 = MediaEffect8.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect8, pauseEffect8);
                 }
-                if (!(numberButton == 9))
+                if (numberButton != 9)
                 {
                     MediaEffect9.controls.pause();
                     timeEffect9 = MediaEffect9.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect9, pauseEffect9);
                 }
-                if (!(numberButton == 10))
+                if (numberButton != 10)
                 {
                     MediaEffect10.controls.pause();
                     timeEffect10 = MediaEffect10.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect10, pauseEffect10);
                 }
-                if (!(numberButton == 11))
+                if (numberButton != 11)
                 {
                     MediaEffect11.controls.pause();
                     timeEffect11 = MediaEffect11.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect11, pauseEffect11);
                 }
-                if (!(numberButton == 12))
+                if (numberButton != 12)
                 {
                     MediaEffect12.controls.pause();
                     timeEffect12 = MediaEffect12.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect12, pauseEffect12);
                 }
-                if (!(numberButton == 13))
+                if (numberButton != 13)
                 {
                     MediaEffect13.controls.pause();
                     timeEffect13 = MediaEffect13.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect13, pauseEffect13);
                 }
-                if (!(numberButton == 14))
+                if (numberButton != 14)
                 {
                     MediaEffect14.controls.pause();
                     timeEffect14 = MediaEffect14.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect14, pauseEffect14);
                 }
-                if (!(numberButton == 15))
+                if (numberButton != 15)
                 {
                     MediaEffect15.controls.pause();
                     timeEffect15 = MediaEffect15.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect15, pauseEffect15);
                 }
-                if (!(numberButton == 16))
+                if (numberButton != 16)
                 {
                     MediaEffect16.controls.pause();
                     timeEffect16 = MediaEffect16.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect16, pauseEffect16);
                 }
-                if (!(numberButton == 17))
+                if (numberButton != 17)
                 {
                     MediaEffect17.controls.pause();
                     timeEffect17 = MediaEffect17.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect17, pauseEffect17);
                 }
-                if (!(numberButton == 18))
+                if (numberButton != 18)
                 {
                     MediaEffect18.controls.pause();
                     timeEffect18 = MediaEffect18.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect18, pauseEffect18);
                 }
-                if (!(numberButton == 19))
+                if (numberButton != 19)
                 {
                     MediaEffect19.controls.pause();
                     timeEffect19 = MediaEffect19.controls.currentPosition;
                     MP3Music.ReHideWidgets(playEffect19, pauseEffect19);
                 }
-                if (!(numberButton == 20))
+                if (numberButton != 20)
                 {
                     MediaEffect20.controls.pause();
                     timeEffect20 = MediaEffect20.controls.currentPosition;
@@ -1358,23 +1475,25 @@ namespace Mp3Player
                         MP3Music.ReHideWidgets(PlayButtonSecond, PauseButtonSecond);
                     }
                 }
-                if (IsInitedEffect)
-                {
+                if (IsInitedEffect) {
                     progressBarEffect.Maximum = Convert.ToInt32(MediaEffect?.currentMedia.duration);
                     progressBarEffect.Value = Convert.ToInt32(MediaEffect?.controls.currentPosition);
 
-                    if (progressBarEffect.Value == progressBarEffect.Maximum - 1)
+                    if (progressBarEffect.Value == progressBarEffect.Maximum - 1 & WhileEffect.Checked)
+                        MediaEffect.controls.currentPosition = 0.1;
+                    if (progressBarEffect.Value == progressBarEffect.Maximum-1 & !WhileEffect.Checked)
                     {
                         timeEffect = 0;
                         MP3Music.ReHideWidgets(playEffect, pauseEffect);
                     }
                 }
-                if (IsInitedEffect2)
-                {
+                if (IsInitedEffect2) {
                     progressBarEffect2.Maximum = Convert.ToInt32(MediaEffect2.currentMedia.duration);
                     progressBarEffect2.Value = Convert.ToInt32(MediaEffect2.controls.currentPosition);
 
-                    if (progressBarEffect2.Value == progressBarEffect2.Maximum - 1)
+                    if (progressBarEffect2.Value == progressBarEffect2.Maximum - 1 & WhileEffect2.Checked)
+                        MediaEffect2.controls.currentPosition = 0.1;
+                    if (progressBarEffect2.Value == progressBarEffect2.Maximum - 1 & !WhileEffect.Checked)
                     {
                         timeEffect2 = 0;
                         MP3Music.ReHideWidgets(playEffect2, pauseEffect2);
@@ -1385,7 +1504,9 @@ namespace Mp3Player
                     progressBarEffect3.Maximum = Convert.ToInt32(MediaEffect3.currentMedia.duration);
                     progressBarEffect3.Value = Convert.ToInt32(MediaEffect3.controls.currentPosition);
 
-                    if (progressBarEffect3.Value == progressBarEffect3.Maximum - 1)
+                    if (progressBarEffect3.Value == progressBarEffect3.Maximum - 1 & WhileEffect3.Checked)
+                        MediaEffect3.controls.currentPosition = 0.1;
+                    if (progressBarEffect3.Value == progressBarEffect3.Maximum - 1 & !WhileEffect3.Checked)
                     {
                         timeEffect3 = 0;
                         MP3Music.ReHideWidgets(playEffect3, pauseEffect3);
@@ -1396,7 +1517,9 @@ namespace Mp3Player
                     progressBarEffect4.Maximum = Convert.ToInt32(MediaEffect4.currentMedia.duration);
                     progressBarEffect4.Value = Convert.ToInt32(MediaEffect4.controls.currentPosition);
 
-                    if (progressBarEffect4.Value == progressBarEffect4.Maximum - 1)
+                    if (progressBarEffect4.Value == progressBarEffect4.Maximum - 1 & WhileEffect4.Checked)
+                        MediaEffect4.controls.currentPosition = 0.1;
+                    if (progressBarEffect4.Value == progressBarEffect4.Maximum - 1 & !WhileEffect4.Checked)
                     {
                         timeEffect4 = 0;
                         MP3Music.ReHideWidgets(playEffect4, pauseEffect4);
@@ -1407,7 +1530,9 @@ namespace Mp3Player
                     progressBarEffect5.Maximum = Convert.ToInt32(MediaEffect5.currentMedia.duration);
                     progressBarEffect5.Value = Convert.ToInt32(MediaEffect5.controls.currentPosition);
 
-                    if (progressBarEffect5.Value == progressBarEffect5.Maximum - 1)
+                    if (progressBarEffect5.Value == progressBarEffect5.Maximum - 1 & WhileEffect5.Checked)
+                        MediaEffect5.controls.currentPosition = 0.1;
+                    if (progressBarEffect5.Value == progressBarEffect5.Maximum - 1 & !WhileEffect5.Checked)
                     {
                         timeEffect5 = 0;
                         MP3Music.ReHideWidgets(playEffect5, pauseEffect5);
@@ -1418,7 +1543,9 @@ namespace Mp3Player
                     progressBarEffect6.Maximum = Convert.ToInt32(MediaEffect6.currentMedia.duration);
                     progressBarEffect6.Value = Convert.ToInt32(MediaEffect6.controls.currentPosition);
 
-                    if (progressBarEffect6.Value == progressBarEffect6.Maximum - 1)
+                    if (progressBarEffect6.Value == progressBarEffect6.Maximum - 1 & WhileEffect6.Checked)
+                        MediaEffect6.controls.currentPosition = 0.1;
+                    if (progressBarEffect6.Value == progressBarEffect6.Maximum - 1 & !WhileEffect6.Checked)
                     {
                         timeEffect6 = 0;
                         MP3Music.ReHideWidgets(playEffect6, pauseEffect6);
@@ -1429,7 +1556,9 @@ namespace Mp3Player
                     progressBarEffect7.Maximum = Convert.ToInt32(MediaEffect7.currentMedia.duration);
                     progressBarEffect7.Value = Convert.ToInt32(MediaEffect7.controls.currentPosition);
 
-                    if (progressBarEffect7.Value == progressBarEffect7.Maximum - 1)
+                    if (progressBarEffect7.Value == progressBarEffect7.Maximum - 1 & WhileEffect7.Checked)
+                        MediaEffect7.controls.currentPosition = 0.1;
+                    if (progressBarEffect7.Value == progressBarEffect7.Maximum - 1 & !WhileEffect7.Checked)
                     {
                         timeEffect7 = 0;
                         MP3Music.ReHideWidgets(playEffect7, pauseEffect7);
@@ -1440,7 +1569,9 @@ namespace Mp3Player
                     progressBarEffect8.Maximum = Convert.ToInt32(MediaEffect8.currentMedia.duration);
                     progressBarEffect8.Value = Convert.ToInt32(MediaEffect8.controls.currentPosition);
 
-                    if (progressBarEffect8.Value == progressBarEffect8.Maximum - 1)
+                    if (progressBarEffect8.Value == progressBarEffect8.Maximum - 1 & WhileEffect8.Checked)
+                        MediaEffect8.controls.currentPosition = 0.1;
+                    if (progressBarEffect8.Value == progressBarEffect8.Maximum - 1 & !WhileEffect8.Checked)
                     {
                         timeEffect8 = 0;
                         MP3Music.ReHideWidgets(playEffect8, pauseEffect8);
@@ -1451,7 +1582,9 @@ namespace Mp3Player
                     progressBarEffect9.Maximum = Convert.ToInt32(MediaEffect9.currentMedia.duration);
                     progressBarEffect9.Value = Convert.ToInt32(MediaEffect9.controls.currentPosition);
 
-                    if (progressBarEffect9.Value == progressBarEffect9.Maximum - 1)
+                    if (progressBarEffect9.Value == progressBarEffect9.Maximum - 1 & WhileEffect9.Checked)
+                        MediaEffect9.controls.currentPosition = 0.1;
+                    if (progressBarEffect9.Value == progressBarEffect9.Maximum - 1 & !WhileEffect9.Checked)
                     {
                         timeEffect9 = 0;
                         MP3Music.ReHideWidgets(playEffect9, pauseEffect9);
@@ -1462,7 +1595,9 @@ namespace Mp3Player
                     progressBarEffect10.Maximum = Convert.ToInt32(MediaEffect10.currentMedia.duration);
                     progressBarEffect10.Value = Convert.ToInt32(MediaEffect10.controls.currentPosition);
 
-                    if (progressBarEffect10.Value == progressBarEffect10.Maximum - 1)
+                    if (progressBarEffect10.Value == progressBarEffect10.Maximum - 1 & WhileEffect10.Checked)
+                        MediaEffect10.controls.currentPosition = 0.1;
+                    if (progressBarEffect10.Value == progressBarEffect10.Maximum - 1 & !WhileEffect10.Checked)
                     {
                         timeEffect10 = 0;
                         MP3Music.ReHideWidgets(playEffect10, pauseEffect10);
@@ -1473,7 +1608,9 @@ namespace Mp3Player
                     progressBarEffect11.Maximum = Convert.ToInt32(MediaEffect11.currentMedia.duration);
                     progressBarEffect11.Value = Convert.ToInt32(MediaEffect11.controls.currentPosition);
 
-                    if (progressBarEffect11.Value == progressBarEffect11.Maximum - 1)
+                    if (progressBarEffect11.Value == progressBarEffect11.Maximum - 1 & WhileEffect11.Checked)
+                        MediaEffect11.controls.currentPosition = 0.1;
+                    if (progressBarEffect11.Value == progressBarEffect11.Maximum - 1 & !WhileEffect11.Checked)
                     {
                         timeEffect11 = 0;
                         MP3Music.ReHideWidgets(playEffect11, pauseEffect11);
@@ -1484,7 +1621,9 @@ namespace Mp3Player
                     progressBarEffect12.Maximum = Convert.ToInt32(MediaEffect12.currentMedia.duration);
                     progressBarEffect12.Value = Convert.ToInt32(MediaEffect12.controls.currentPosition);
 
-                    if (progressBarEffect12.Value == progressBarEffect12.Maximum - 1)
+                    if (progressBarEffect12.Value == progressBarEffect12.Maximum - 1 & WhileEffect12.Checked)
+                        MediaEffect12.controls.currentPosition = 0.1;
+                    if (progressBarEffect12.Value == progressBarEffect12.Maximum - 1 & !WhileEffect12.Checked)
                     {
                         timeEffect12 = 0;
                         MP3Music.ReHideWidgets(playEffect12, pauseEffect12);
@@ -1495,7 +1634,9 @@ namespace Mp3Player
                     progressBarEffect13.Maximum = Convert.ToInt32(MediaEffect13.currentMedia.duration);
                     progressBarEffect13.Value = Convert.ToInt32(MediaEffect13.controls.currentPosition);
 
-                    if (progressBarEffect13.Value == progressBarEffect13.Maximum - 1)
+                    if (progressBarEffect13.Value == progressBarEffect13.Maximum - 1 & WhileEffect13.Checked)
+                        MediaEffect13.controls.currentPosition = 0.1;
+                    if (progressBarEffect13.Value == progressBarEffect13.Maximum - 1 & !WhileEffect13.Checked)
                     {
                         timeEffect13 = 0;
                         MP3Music.ReHideWidgets(playEffect13, pauseEffect13);
@@ -1506,7 +1647,9 @@ namespace Mp3Player
                     progressBarEffect14.Maximum = Convert.ToInt32(MediaEffect14.currentMedia.duration);
                     progressBarEffect14.Value = Convert.ToInt32(MediaEffect14.controls.currentPosition);
 
-                    if (progressBarEffect14.Value == progressBarEffect14.Maximum - 1)
+                    if (progressBarEffect14.Value == progressBarEffect14.Maximum - 1 & WhileEffect14.Checked)
+                        MediaEffect14.controls.currentPosition = 0.1;
+                    if (progressBarEffect14.Value == progressBarEffect14.Maximum - 1 & !WhileEffect14.Checked)
                     {
                         timeEffect14 = 0;
                         MP3Music.ReHideWidgets(playEffect14, pauseEffect14);
@@ -1517,7 +1660,9 @@ namespace Mp3Player
                     progressBarEffect15.Maximum = Convert.ToInt32(MediaEffect15.currentMedia.duration);
                     progressBarEffect15.Value = Convert.ToInt32(MediaEffect15.controls.currentPosition);
 
-                    if (progressBarEffect15.Value == progressBarEffect15.Maximum - 1)
+                    if (progressBarEffect15.Value == progressBarEffect15.Maximum - 1 & WhileEffect15.Checked)
+                        MediaEffect15.controls.currentPosition = 0.1;
+                    if (progressBarEffect15.Value == progressBarEffect15.Maximum - 1 & !WhileEffect15.Checked)
                     {
                         timeEffect15 = 0;
                         MP3Music.ReHideWidgets(playEffect15, pauseEffect15);
@@ -1528,7 +1673,9 @@ namespace Mp3Player
                     progressBarEffect16.Maximum = Convert.ToInt32(MediaEffect16.currentMedia.duration);
                     progressBarEffect16.Value = Convert.ToInt32(MediaEffect16.controls.currentPosition);
 
-                    if (progressBarEffect16.Value == progressBarEffect16.Maximum - 1)
+                    if (progressBarEffect16.Value == progressBarEffect16.Maximum - 1 & WhileEffect16.Checked)
+                        MediaEffect16.controls.currentPosition = 0.1;
+                    if (progressBarEffect16.Value == progressBarEffect16.Maximum - 1 & !WhileEffect16.Checked)
                     {
                         timeEffect16 = 0;
                         MP3Music.ReHideWidgets(playEffect16, pauseEffect16);
@@ -1539,7 +1686,9 @@ namespace Mp3Player
                     progressBarEffect17.Maximum = Convert.ToInt32(MediaEffect17.currentMedia.duration);
                     progressBarEffect17.Value = Convert.ToInt32(MediaEffect17.controls.currentPosition);
 
-                    if (progressBarEffect17.Value == progressBarEffect17.Maximum - 1)
+                    if (progressBarEffect17.Value == progressBarEffect17.Maximum - 1 & WhileEffect17.Checked)
+                        MediaEffect17.controls.currentPosition = 0.1;
+                    if (progressBarEffect17.Value == progressBarEffect17.Maximum - 1 & !WhileEffect17.Checked)
                     {
                         timeEffect17 = 0;
                         MP3Music.ReHideWidgets(playEffect17, pauseEffect17);
@@ -1550,7 +1699,9 @@ namespace Mp3Player
                     progressBarEffect18.Maximum = Convert.ToInt32(MediaEffect18.currentMedia.duration);
                     progressBarEffect18.Value = Convert.ToInt32(MediaEffect18.controls.currentPosition);
 
-                    if (progressBarEffect18.Value == progressBarEffect18.Maximum - 1)
+                    if (progressBarEffect18.Value == progressBarEffect18.Maximum - 1 & WhileEffect18.Checked)
+                        MediaEffect18.controls.currentPosition = 0.1;
+                    if (progressBarEffect18.Value == progressBarEffect18.Maximum - 1 & !WhileEffect18.Checked)
                     {
                         timeEffect18 = 0;
                         MP3Music.ReHideWidgets(playEffect18, pauseEffect18);
@@ -1561,7 +1712,9 @@ namespace Mp3Player
                     progressBarEffect19.Maximum = Convert.ToInt32(MediaEffect19.currentMedia.duration);
                     progressBarEffect19.Value = Convert.ToInt32(MediaEffect19.controls.currentPosition);
 
-                    if (progressBarEffect19.Value == progressBarEffect19.Maximum - 1)
+                    if (progressBarEffect19.Value == progressBarEffect19.Maximum - 1 & WhileEffect19.Checked)
+                        MediaEffect19.controls.currentPosition = 0.1;
+                    if (progressBarEffect19.Value == progressBarEffect19.Maximum - 1 & !WhileEffect19.Checked)
                     {
                         timeEffect19 = 0;
                         MP3Music.ReHideWidgets(playEffect19, pauseEffect19);
@@ -1572,7 +1725,9 @@ namespace Mp3Player
                     progressBarEffect20.Maximum = Convert.ToInt32(MediaEffect20.currentMedia.duration);
                     progressBarEffect20.Value = Convert.ToInt32(MediaEffect20.controls.currentPosition);
 
-                    if (progressBarEffect20.Value == progressBarEffect20.Maximum - 1)
+                    if (progressBarEffect20.Value == progressBarEffect20.Maximum - 1 & WhileEffect20.Checked)
+                        MediaEffect20.controls.currentPosition = 0.1;
+                    if (progressBarEffect20.Value == progressBarEffect20.Maximum - 1 & !WhileEffect20.Checked)
                     {
                         timeEffect20 = 0;
                         MP3Music.ReHideWidgets(playEffect20, pauseEffect20);
@@ -1580,9 +1735,13 @@ namespace Mp3Player
                 }
             } catch { }
         }
+
         private void button1_Click(object sender, EventArgs e) => Application.Exit();
+
         private void SettingsButton_Click(object sender, EventArgs e) => effectsApplication.Show();
+
         private void SettingsDJ_Click(object sender, EventArgs e) => settingsApp.Show();
+
         private void MinimizeWindow_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;
 
         private void DownClicedLabel(object sender, MouseEventArgs e) {
@@ -1597,6 +1756,110 @@ namespace Mp3Player
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void AllStopButton_Click(object sender, EventArgs e) {
+            PouseButton_Click("", new EventArgs());
+            PauseButtonSecond_Click("", new EventArgs());
+            pauseEffect_Click("", new EventArgs());
+            pauseEffect2_Click("", new EventArgs());
+            pauseEffect3_Click("", new EventArgs());
+            pauseEffect4_Click("", new EventArgs());
+            pauseEffect5_Click("", new EventArgs());
+            pauseEffect6_Click("", new EventArgs());
+            pauseEffect7_Click("", new EventArgs());
+            pauseEffect8_Click("", new EventArgs());
+            pauseEffect9_Click("", new EventArgs());
+            pauseEffect10_Click("", new EventArgs());
+            pauseEffect11_Click("", new EventArgs());
+            pauseEffect12_Click("", new EventArgs());
+            pauseEffect13_Click("", new EventArgs());
+            pauseEffect14_Click("", new EventArgs());
+            pauseEffect15_Click("", new EventArgs());
+            pauseEffect16_Click("", new EventArgs());
+            pauseEffect17_Click("", new EventArgs());
+            pauseEffect18_Click("", new EventArgs());
+            pauseEffect19_Click("", new EventArgs());
+            pauseEffect20_Click("", new EventArgs());
+        }
+
+        private void AllResetButton_Click(object sender, EventArgs e) {
+            resetMainMusic_Click("", new EventArgs());
+            ResetSecondMusic_Click("", new EventArgs());
+            ResetEffect_Click("", new EventArgs());
+            ResetEffect2_Click("", new EventArgs());
+            ResetEffect3_Click("", new EventArgs());
+            ResetEffect4_Click("", new EventArgs());
+            ResetEffect5_Click("", new EventArgs());
+            ResetEffect6_Click("", new EventArgs());
+            ResetEffect7_Click("", new EventArgs());
+            ResetEffect8_Click("", new EventArgs());
+            ResetEffect9_Click("", new EventArgs());
+            ResetEffect10_Click("", new EventArgs());
+            ResetEffect11_Click("", new EventArgs());
+            ResetEffect12_Click("", new EventArgs());
+            ResetEffect13_Click("", new EventArgs());
+            ResetEffect14_Click("", new EventArgs());
+            ResetEffect15_Click("", new EventArgs()); 
+            ResetEffect16_Click("", new EventArgs());
+            ResetEffect17_Click("", new EventArgs());
+            ResetEffect18_Click("", new EventArgs());
+            ResetEffect19_Click("", new EventArgs());
+            ResetEffect20_Click("", new EventArgs());
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData) {
+            switch (keyData) {
+                case Keys.F1:
+                    using (RegistryKey regEdit = Registry.CurrentUser.CreateSubKey(@"Software\DJ-Sharp")) {
+                        regEdit.SetValue("WhileMain", WhileMain.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileSecond", WhileSecond.Checked ? 1 : 0);
+                        regEdit.SetValue("MainMusic", MainMusic.Text);
+                        regEdit.SetValue("MainMusicSecond", MainMusicSecond.Text);
+                        regEdit.SetValue("WhileEffect", WhileEffect.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect2", WhileEffect2.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect3", WhileEffect3.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect4", WhileEffect4.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect5", WhileEffect5.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect6", WhileEffect6.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect7", WhileEffect7.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect8", WhileEffect8.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect9", WhileEffect9.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect10", WhileEffect10.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect11", WhileEffect11.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect12", WhileEffect12.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect13", WhileEffect13.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect14", WhileEffect14.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect15", WhileEffect15.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect16", WhileEffect16.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect17", WhileEffect17.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect18", WhileEffect18.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect19", WhileEffect19.Checked ? 1 : 0);
+                        regEdit.SetValue("WhileEffect20", WhileEffect20.Checked ? 1 : 0);
+                        regEdit.SetValue("EffectName", EffectName.Text);
+                        regEdit.SetValue("EffectName2", EffectName2.Text);
+                        regEdit.SetValue("EffectName3", EffectName3.Text);
+                        regEdit.SetValue("EffectName4", EffectName4.Text);
+                        regEdit.SetValue("EffectName5", EffectName5.Text);
+                        regEdit.SetValue("EffectName6", EffectName6.Text);
+                        regEdit.SetValue("EffectName7", EffectName7.Text);
+                        regEdit.SetValue("EffectName8", EffectName8.Text);
+                        regEdit.SetValue("EffectName9", EffectName9.Text);
+                        regEdit.SetValue("EffectName10", EffectName10.Text);
+                        regEdit.SetValue("EffectName11", EffectName11.Text);
+                        regEdit.SetValue("EffectName12", EffectName12.Text);
+                        regEdit.SetValue("EffectName13", EffectName13.Text);
+                        regEdit.SetValue("EffectName14", EffectName14.Text);
+                        regEdit.SetValue("EffectName15", EffectName15.Text);
+                        regEdit.SetValue("EffectName16", EffectName16.Text);
+                        regEdit.SetValue("EffectName17", EffectName17.Text);
+                        regEdit.SetValue("EffectName18", EffectName18.Text);
+                        regEdit.SetValue("EffectName19", EffectName19.Text);
+                        regEdit.SetValue("EffectName20", EffectName20.Text);
+                    }
+                    return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
         #endregion System
 

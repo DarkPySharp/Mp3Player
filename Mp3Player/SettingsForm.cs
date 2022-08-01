@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
@@ -39,11 +38,17 @@ namespace Mp3Player
                 try {
                     int TrFl;
                     int Smooth;
+                    int MultiMusic;
 
                     if (MultiMusicRadio.Checked)
                         TrFl = 1;
                     else
                         TrFl = 0;
+
+                    if (FullMultiMusic.Checked)
+                        MultiMusic = 1;
+                    else
+                        MultiMusic = 0;
 
                     if (SmoothStartStopCheck.Checked)
                         Smooth = 1;
@@ -55,6 +60,7 @@ namespace Mp3Player
                     regEdit.SetValue("StandartVolume", StandartVolume.Text, RegistryValueKind.String);
                     regEdit.SetValue("CheckedStatus", TrFl, RegistryValueKind.String);
                     regEdit.SetValue("Smoothing", Smooth, RegistryValueKind.String);
+                    regEdit.SetValue("MultiMusic", MultiMusic, RegistryValueKind.String);
 
                 } catch (Exception error) { MessageBox.Show(error.Message, "DJ_SHARP", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
@@ -80,17 +86,28 @@ namespace Mp3Player
             }
         }
 
-        public void SetSettings(string _delayTransition, string _delayUpdateProgress, string _StandartVolume, bool CheckedStatus, bool CheckedStatusSmooth)
+        public void SetSettings(string _delayTransition, string _delayUpdateProgress, string _StandartVolume, bool CheckedStatus, bool CheckedStatusSmooth, bool MultiMusicStatus)
         {
             delayTransition.Text = _delayTransition;
             delayUpdateProgress.Text = _delayUpdateProgress;
             StandartVolume.Text = _StandartVolume;
             MultiMusicRadio.Checked = CheckedStatus;
             SmoothStartStopCheck.Checked = CheckedStatusSmooth;
+            FullMultiMusic.Checked = MultiMusicStatus;
         }
 
         private void MinimizeWindow_Click(object sender, EventArgs e) {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void FullMultiMusic_CheckedChanged(object sender, EventArgs e) {
+            MultiMusicRadio.Checked = false;
+        }
+
+        private void MultiMusicRadio_CheckedChanged(object sender, EventArgs e) {
+            if (FullMultiMusic.Checked) {
+                MultiMusicRadio.Checked = false;
+            }
         }
     }
 }
