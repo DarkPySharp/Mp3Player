@@ -110,6 +110,8 @@ namespace Mp3Player
         public DJ_SHARP() { InitializeComponent(); }
 
         private void Form1_Load(object sender, EventArgs e) {
+            effectsApplication = new TakeMusic(this);
+
             using (RegistryKey regEdit = Registry.CurrentUser.OpenSubKey(@"Software\DJ-Sharp", false)) {
                 string REGdelayTransition = regEdit?.GetValue("delayTransition")?.ToString();
                 string REGdelayUpdateProgress = regEdit?.GetValue("delayUpdateProgress")?.ToString();
@@ -239,30 +241,28 @@ namespace Mp3Player
                 WhileEffect18.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect18"));
                 WhileEffect19.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect19"));
                 WhileEffect20.Checked = Convert.ToBoolean(regEdit?.GetValue("WhileEffect20"));
-                EffectName.Text = regEdit?.GetValue("EffectName").ToString();
-                EffectName2.Text = regEdit?.GetValue("EffectName2").ToString();
-                EffectName3.Text = regEdit?.GetValue("EffectName3").ToString();
-                EffectName4.Text = regEdit?.GetValue("EffectName4").ToString();
-                EffectName5.Text = regEdit?.GetValue("EffectName5").ToString();
-                EffectName6.Text = regEdit?.GetValue("EffectName6").ToString();
-                EffectName7.Text = regEdit?.GetValue("EffectName7").ToString();
-                EffectName8.Text = regEdit?.GetValue("EffectName8").ToString();
-                EffectName9.Text = regEdit?.GetValue("EffectName9").ToString();
-                EffectName10.Text = regEdit?.GetValue("EffectName10").ToString();
-                EffectName11.Text = regEdit?.GetValue("EffectName11").ToString();
-                EffectName12.Text = regEdit?.GetValue("EffectName12").ToString();
-                EffectName13.Text = regEdit?.GetValue("EffectName13").ToString();
-                EffectName14.Text = regEdit?.GetValue("EffectName14").ToString();
-                EffectName15.Text = regEdit?.GetValue("EffectName15").ToString();
-                EffectName16.Text = regEdit?.GetValue("EffectName16").ToString();
-                EffectName17.Text = regEdit?.GetValue("EffectName17").ToString();
-                EffectName18.Text = regEdit?.GetValue("EffectName18").ToString();
-                EffectName19.Text = regEdit?.GetValue("EffectName19").ToString();
-                EffectName20.Text = regEdit?.GetValue("EffectName20").ToString();
+                effectsApplication.BoxLineEffect.Text = regEdit?.GetValue("EffectName").ToString();
+                effectsApplication.BoxLineEffect2.Text = regEdit?.GetValue("EffectName2").ToString();
+                effectsApplication.BoxLineEffect3.Text = regEdit?.GetValue("EffectName3").ToString();
+                effectsApplication.BoxLineEffect4.Text = regEdit?.GetValue("EffectName4").ToString();
+                effectsApplication.BoxLineEffect5.Text = regEdit?.GetValue("EffectName5").ToString();
+                effectsApplication.BoxLineEffect6.Text = regEdit?.GetValue("EffectName6").ToString();
+                effectsApplication.BoxLineEffect7.Text = regEdit?.GetValue("EffectName7").ToString();
+                effectsApplication.BoxLineEffect8.Text = regEdit?.GetValue("EffectName8").ToString();
+                effectsApplication.BoxLineEffect9.Text = regEdit?.GetValue("EffectName9").ToString();
+                effectsApplication.BoxLineEffect10.Text = regEdit?.GetValue("EffectName10").ToString();
+                effectsApplication.BoxLineEffect11.Text = regEdit?.GetValue("EffectName11").ToString();
+                effectsApplication.BoxLineEffect12.Text = regEdit?.GetValue("EffectName12").ToString();
+                effectsApplication.BoxLineEffect13.Text = regEdit?.GetValue("EffectName13").ToString();
+                effectsApplication.BoxLineEffect14.Text = regEdit?.GetValue("EffectName14").ToString();
+                effectsApplication.BoxLineEffect15.Text = regEdit?.GetValue("EffectName15").ToString();
+                effectsApplication.BoxLineEffect16.Text = regEdit?.GetValue("EffectName16").ToString();
+                effectsApplication.BoxLineEffect17.Text = regEdit?.GetValue("EffectName17").ToString();
+                effectsApplication.BoxLineEffect18.Text = regEdit?.GetValue("EffectName18").ToString();
+                effectsApplication.BoxLineEffect19.Text = regEdit?.GetValue("EffectName19").ToString();
+                effectsApplication.BoxLineEffect20.Text = regEdit?.GetValue("EffectName20").ToString();
                 #endregion
             }
-
-            effectsApplication = new TakeMusic(this);
         }
 
         #region MainMusic
